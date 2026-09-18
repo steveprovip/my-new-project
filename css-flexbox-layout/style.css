@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* =======================================
+   BƯỚC 2: CONTAINER CHÍNH
+   ======================================= */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header, .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.header h1 {
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.header p {
+    font-size: 14px;
+    color: #bbb;
+}
+
+.nav {
+    background-color: #444;
+    color: white;
+    text-align: center;
+    padding: 12px 15px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    background-color: #0066cc;
+    color: #fff;
+}
+
+/* =======================================
+   MAIN CONTAINER (CONTENT + SIDEBAR)
+   ======================================= */
+.main-container {
+    display: flex;
+    flex: 1;
+}
+
+.content {
+    flex: 3;
+    padding: 25px;
+    background-color: #ffffff;
+}
+
+.content h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: #222;
+}
+
+.content p {
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.card-box {
+    background-color: #f8fafc;
+    border-left: 4px solid #0066cc;
+    padding: 16px 20px;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.card-box h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #0066cc;
+}
+
+.card-box ul {
+    padding-left: 20px;
+}
+
+.card-box li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 25px 20px;
+    border-left: 1px solid #e0e0e0;
+}
+
+.sidebar h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.sidebar-desc {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.widget h4 {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #0066cc;
+    padding-bottom: 5px;
+}
+
+.widget ul {
+    list-style: none;
+}
+
+.widget ul li {
+    margin-bottom: 8px;
+}
+
+.widget ul li a {
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.widget ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    font-size: 14px;
+}
+
+/* =======================================
+   BƯỚC 3: RESPONSIVE VỚI MEDIA QUERIES (<= 768px)
+   ======================================= */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        border-left: none;
+        border-top: 1px solid #e0e0e0;
+    }
+}

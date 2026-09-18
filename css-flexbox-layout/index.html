@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 1. HEADER -->
+        <header class="header">
+            <h1>Header</h1>
+            <p>Xây dựng bố cục trang web với CSS Flexbox</p>
+        </header>
+
+        <!-- 2. NAVIGATION -->
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="#" class="active">Trang chủ</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Khóa học</a></li>
+                <li><a href="#">Tin tức</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+
+        <!-- 3. MAIN CONTAINER (CONTENT + SIDEBAR) -->
+        <div class="main-container">
+            <main class="content">
+                <h2>Main Content</h2>
+                <p>Đây là khu vực nội dung chính của trang web. Bố cục này được thiết lập bằng thuộc tính <code>flex: 3;</code> để chiếm 3 phần không gian chiều ngang trên màn hình Desktop.</p>
+                <div class="card-box">
+                    <h3>Ưu điểm của bố cục CSS Flexbox:</h3>
+                    <ul>
+                        <li><strong>Dễ dàng căn chỉnh:</strong> Hỗ trợ căn giữa, phân bổ khoảng cách đồng đều với <code>justify-content</code> và <code>align-items</code>.</li>
+                        <li><strong>Linh hoạt theo tỷ lệ:</strong> Sử dụng cú pháp rút gọn <code>flex: 3</code> và <code>flex: 1</code> để phân chia tỷ lệ cột trực quan.</li>
+                        <li><strong>Responsive đơn giản:</strong> Chỉ cần thay đổi <code>flex-direction: column</code> trong Media Queries là giao diện tự động thích ứng với thiết bị di động.</li>
+                    </ul>
+                </div>
+            </main>
+
+            <aside class="sidebar">
+                <h3>Sidebar</h3>
+                <p class="sidebar-desc">Khu vực chứa nội dung phụ (quảng cáo, bài viết liên quan, widget). Chiếm tỷ lệ <code>flex: 1;</code>.</p>
+                <div class="widget">
+                    <h4>Chuyên mục nổi bật</h4>
+                    <ul>
+                        <li><a href="#">HTML5 & CSS3</a></li>
+                        <li><a href="#">CSS Grid vs Flexbox</a></li>
+                        <li><a href="#">Responsive Web Design</a></li>
+                        <li><a href="#">JavaScript Nâng Cao</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+        <!-- 4. FOOTER -->
+        <footer class="footer">
+            <p>&copy; 2026 CodeGym - [Thực hành] Xây dựng bố cục trang web với CSS Flexbox</p>
+        </footer>
+    </div>
+</body>
+</html>
