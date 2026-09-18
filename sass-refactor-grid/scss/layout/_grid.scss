@@ -1,0 +1,106 @@
+// layout/_grid.scss
+.gridcontainer {
+  width: 100%;
+}
+
+.gridwrapper {
+  overflow: auto;
+  position: relative;
+  height: 250px;
+  @include clearfix;
+
+  &--header {
+    height: 90px;
+  }
+
+  &--main {
+    height: 230px;
+  }
+
+  &--footer {
+    height: 50px;
+  }
+
+  &--background {
+    height: 370px;
+  }
+}
+
+.gridcontent {
+  @include grid-column(1);
+  border-right: 1px solid $color-border-grey;
+  background-color: $color-grid-alt;
+
+  &--full {
+    width: 100%;
+    border-right-color: transparent;
+  }
+
+  &--header-bg {
+    background-color: $color-header;
+  }
+
+  &--footer-bg {
+    background-color: $color-footer;
+  }
+
+  &--sidebar {
+    background-color: $color-bg-white;
+    border: none;
+    width: 25%; // tương đương 3 cột
+    padding-top: 15px;
+  }
+
+  &--empty {
+    background-color: $color-bg-white;
+    border: none;
+  }
+
+  &--outline {
+    background-color: $color-bg-white;
+    border-right: 1px solid $color-border-grid;
+
+    &:first-child {
+      border-left: 1px solid $color-border-grid;
+    }
+  }
+}
+
+// Menu items và card content
+.menu-item {
+  background-color: $color-menu-accent;
+  border: none;
+  width: 100%;
+  height: 15%;
+  margin-bottom: 10px;
+
+  &--last {
+    margin-bottom: 0;
+  }
+}
+
+.hero-box {
+  background-color: $color-menu-accent;
+  border: none;
+  width: 100%;
+  height: 92%;
+}
+
+.overlay-layout {
+  position: absolute;
+  opacity: 0.9;
+  width: auto;
+  left: 8px;
+  right: 10px;
+  top: 10px;
+}
+
+.underlay-grid {
+  opacity: 0.1;
+}
+
+.notice-text {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}

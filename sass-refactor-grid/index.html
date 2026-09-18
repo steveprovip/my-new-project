@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid - Refactored with SASS</title>
+    <!-- Nhúng CSS sau khi tái cấu trúc bằng SASS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- LỚP GIAO DIỆN CHÍNH (OVERLAY LAYOUT ĐÃ XÓA STYLE INLINE) -->
+    <div class="overlay-layout">
+        <div class="gridcontainer">
+            <!-- Header Grid -->
+            <div class="gridwrapper gridwrapper--header">
+                <div class="gridcontent gridcontent--full gridcontent--header-bg"></div>
+            </div>
+
+            <!-- Main Grid: Sidebar trái + Content phải -->
+            <div class="gridwrapper gridwrapper--main">
+                <div class="gridcontent gridcontent--sidebar">
+                    <div class="menu-item"></div>
+                    <div class="menu-item"></div>
+                    <div class="menu-item"></div>
+                    <div class="menu-item menu-item--last"></div>
+                </div>
+                <div class="gridcontent gridcontent--empty"></div>
+                <div class="gridcontent gridcontent--empty"></div>
+                <div class="gridcontent gridcontent--empty"></div>
+                <div class="gridcontent gridcontent--empty"></div>
+                <div class="gridcontent gridcontent--empty"></div>
+                <div class="gridcontent gridcontent--empty"></div>
+                <div class="gridcontent gridcontent--sidebar">
+                    <div class="hero-box"></div>
+                </div>
+            </div>
+
+            <!-- Footer Grid -->
+            <div class="gridwrapper gridwrapper--footer">
+                <div class="gridcontent gridcontent--full gridcontent--footer-bg"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LỚP LƯỚI 12 CỘT NỀN MINH HỌA (UNDERLAY 12 COLUMNS) -->
+    <div class="gridcontainer underlay-grid">
+        <div class="gridwrapper gridwrapper--background">
+            <div class="gridcontent gridcontent--outline"></div>
+            <div class="gridcontent gridcontent--outline"></div>
+            <div class="gridcontent gridcontent--outline"></div>
+            <div class="gridcontent gridcontent--outline"></div>
+            <div class="gridcontent gridcontent--outline"></div>
+            <div class="gridcontent gridcontent--outline"></div>
+            <div class="gridcontent gridcontent--outline"></div>
+            <div class="gridcontent gridcontent--outline"></div>
+            <div class="gridcontent gridcontent--outline"></div>
+            <div class="gridcontent gridcontent--outline"></div>
+            <div class="gridcontent gridcontent--outline"></div>
+            <div class="gridcontent gridcontent--outline"></div>
+        </div>
+    </div>
+
+    <p class="notice-text">Resize the browser window to see that this grid will respond to the resizing, and always use 100% of the available space. (Tái cấu trúc hoàn chỉnh từ mã nguồn CodeGym sang SASS chuẩn).</p>
+
+</body>
+</html>
