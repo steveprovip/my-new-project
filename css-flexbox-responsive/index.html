@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Tạo bố cục responsive bằng CSS Flexbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- 1. HEADER -->
+        <header class="header">
+            <div class="header-container">
+                <h1>DevHub Academy</h1>
+                <p>Nền tảng học lập trình Web & Bố cục CSS Flexbox hiện đại</p>
+            </div>
+        </header>
+
+        <!-- 2. NAVIGATION -->
+        <nav class="navigation">
+            <div class="nav-container">
+                <ul class="nav-list">
+                    <li><a href="#" class="active">Trang chủ</a></li>
+                    <li><a href="#">Khóa học Frontend</a></li>
+                    <li><a href="#">Flexbox Master</a></li>
+                    <li><a href="#">Thực hành CSS</a></li>
+                    <li><a href="#">Blog Công Nghệ</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- 3. MAIN BODY CONTAINER (NỘI DUNG CHÍNH + SIDEBAR) -->
+        <div class="main-body">
+            <!-- 3.1. MAIN CONTENT -->
+            <main class="main-content">
+                <article class="post-card">
+                    <span class="post-tag">CSS Flexbox</span>
+                    <h2>Xây Dựng Bố Cục Trang Web Chuẩn Responsive Với CSS Flexbox</h2>
+                    <div class="post-meta">Tác giả: <strong>Nguyễn Duy Linh</strong> | Cập nhật: 18/09/2026</div>
+                    <p>CSS Flexible Box Layout (Flexbox) là một module bố cục được thiết kế để phân bổ không gian giữa các phần tử trong một vùng chứa, ngay cả khi kích thước của chúng không cố định hoặc linh hoạt theo kích thước màn hình.</p>
+                    <p>Điểm mạnh nhất của Flexbox là khả năng quản lý tỷ lệ co giãn (`flex-grow`, `flex-shrink`, `flex-basis`), căn lề trục chính (`justify-content`) và trục phụ (`align-items`) một cách tự nhiên mà không cần dùng đến các kỹ thuật cũ như `float` hay `clear`.</p>
+                </article>
+
+                <div class="cards-grid">
+                    <div class="card-item">
+                        <h3>1. Trục Main & Cross</h3>
+                        <p>Hiểu rõ hướng của `flex-direction` (row hoặc column) để kiểm soát hướng dàn trang.</p>
+                    </div>
+                    <div class="card-item">
+                        <h3>2. Căn chỉnh linh hoạt</h3>
+                        <p>Dễ dàng căn giữa nội dung hoàn hảo chỉ với 2 dòng `justify-content` và `align-items`.</p>
+                    </div>
+                    <div class="card-item">
+                        <h3>3. Responsive dễ dàng</h3>
+                        <p>Chuyển đổi giao diện sang màn hình điện thoại chỉ bằng cách đổi `flex-direction: column`.</p>
+                    </div>
+                </div>
+            </main>
+
+            <!-- 3.2. SIDEBAR -->
+            <aside class="sidebar">
+                <div class="widget">
+                    <h3>Khóa học đề xuất</h3>
+                    <ul class="widget-menu">
+                        <li><a href="#">HTML5 & CSS3 Cơ Bản Đến Nâng Cao</a></li>
+                        <li><a href="#">Chuyên sâu Flexbox & CSS Grid</a></li>
+                        <li><a href="#">Thiết kế Responsive Web đa nền tảng</a></li>
+                        <li><a href="#">Lập trình JavaScript Hiện Đại (ES6+)</a></li>
+                    </ul>
+                </div>
+
+                <div class="widget banner-widget">
+                    <div class="banner-badge">Ưu đãi 40%</div>
+                    <h4>Đăng ký nhận tài liệu CSS3</h4>
+                    <p>Nhận trọn bộ Ebook Flexbox & CSS Grid Cheatsheet miễn phí ngay hôm nay!</p>
+                    <button class="btn-cta">Nhận Ebook Ngay</button>
+                </div>
+            </aside>
+        </div>
+
+        <!-- 4. FOOTER -->
+        <footer class="footer">
+            <div class="footer-container">
+                <p>&copy; 2026 DevHub Academy. [Bài tập] Tạo bố cục responsive bằng CSS Flexbox | CodeGym</p>
+                <p class="footer-sub">Hỗ trợ hiển thị tối ưu trên cả Desktop, Tablet và Mobile.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

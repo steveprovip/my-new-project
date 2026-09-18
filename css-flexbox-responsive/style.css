@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* ========================================================
+   WRAPPER CONTAINER CHÍNH BẰNG CSS FLEXBOX
+   ======================================================== */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 1. Header */
+.header {
+    background: linear-gradient(135deg, #1e3a8a, #0284c7);
+    color: #ffffff;
+    padding: 24px 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header h1 {
+    font-size: 26px;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+}
+
+.header p {
+    font-size: 15px;
+    color: #cbd5e1;
+}
+
+/* 2. Navigation */
+.navigation {
+    background-color: #0f172a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0 10px;
+}
+
+.nav-list li a {
+    display: block;
+    padding: 14px 18px;
+    color: #e2e8f0;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-list li a:hover,
+.nav-list li a.active {
+    background-color: #0284c7;
+    color: #ffffff;
+}
+
+/* 3. Main Body Container (Content + Sidebar) */
+.main-body {
+    display: flex;
+    flex: 1;
+    max-width: 1200px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 0 16px;
+    gap: 20px;
+}
+
+/* 3.1. Main Content */
+.main-content {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post-card {
+    background-color: #ffffff;
+    padding: 26px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.post-tag {
+    display: inline-block;
+    background-color: #e0f2fe;
+    color: #0369a1;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.post-card h2 {
+    font-size: 22px;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.post-meta {
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.post-card p {
+    margin-bottom: 14px;
+    color: #334155;
+    font-size: 15px;
+}
+
+.cards-grid {
+    display: flex;
+    gap: 16px;
+}
+
+.card-item {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.card-item h3 {
+    font-size: 15px;
+    color: #0284c7;
+    margin-bottom: 8px;
+}
+
+.card-item p {
+    font-size: 13px;
+    color: #64748b;
+}
+
+/* 3.2. Sidebar */
+.sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.widget {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.widget h3 {
+    font-size: 17px;
+    color: #0f172a;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #0284c7;
+}
+
+.widget-menu {
+    list-style: none;
+}
+
+.widget-menu li {
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed #e2e8f0;
+}
+
+.widget-menu li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.widget-menu li a {
+    text-decoration: none;
+    color: #334155;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.widget-menu li a:hover {
+    color: #0284c7;
+    text-decoration: underline;
+}
+
+.banner-widget {
+    background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+    border: 1px solid #bbf7d0;
+}
+
+.banner-badge {
+    background-color: #16a34a;
+    color: white;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.banner-widget h4 {
+    font-size: 16px;
+    color: #14532d;
+    margin-bottom: 8px;
+}
+
+.banner-widget p {
+    font-size: 13px;
+    color: #166534;
+    margin-bottom: 14px;
+}
+
+.btn-cta {
+    background-color: #16a34a;
+    color: #ffffff;
+    border: none;
+    padding: 9px 18px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-cta:hover {
+    background-color: #15803d;
+}
+
+/* 4. Footer */
+.footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 24px 20px;
+    margin-top: auto;
+    font-size: 14px;
+}
+
+.footer-container p {
+    margin-bottom: 4px;
+}
+
+.footer-sub {
+    font-size: 12px;
+    color: #64748b;
+}
+
+/* ========================================================
+   YÊU CẦU RESPONSIVE TRÊN MOBILE (<= 768px)
+   Các phần tử xếp dọc theo chiều dọc
+   ======================================================== */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+    }
+
+    .nav-list li a {
+        padding: 10px 14px;
+        border-bottom: 1px solid #1e293b;
+    }
+
+    .main-body {
+        flex-direction: column;
+        padding: 0 10px;
+        gap: 16px;
+    }
+
+    .cards-grid {
+        flex-direction: column;
+    }
+}
