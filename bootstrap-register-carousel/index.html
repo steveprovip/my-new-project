@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Tạo Trang Đăng Ký Người Dùng - Bootstrap Form & Carousel</title>
+    <!-- Nhúng Bootstrap 5.3.0 CSS từ CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f0f4f8, #e2e8f0);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        .main-auth-card {
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        .carousel-item img {
+            height: 520px;
+            object-fit: cover;
+            filter: brightness(0.65);
+        }
+        .carousel-caption-custom {
+            bottom: 40px;
+            left: 30px;
+            right: 30px;
+        }
+    </style>
+</head>
+<body class="py-4 py-md-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-xl-10">
+                <div class="main-auth-card">
+                    <div class="row g-0">
+                        
+                        <!-- CỘT 1: CAROUSEL HIỂN THỊ CÁC LỢI ÍCH DỊCH VỤ (Desktop col-lg-6) -->
+                        <div class="col-12 col-lg-6 d-none d-lg-block bg-dark">
+                            <div id="benefitsCarousel" class="carousel slide h-100" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#benefitsCarousel" data-bs-slide-to="0" class="active"></button>
+                                    <button type="button" data-bs-target="#benefitsCarousel" data-bs-slide-to="1"></button>
+                                    <button type="button" data-bs-target="#benefitsCarousel" data-bs-slide-to="2"></button>
+                                </div>
+                                <div class="carousel-inner h-100">
+                                    <!-- Slide 1 -->
+                                    <div class="carousel-item active h-100" data-bs-interval="4500">
+                                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" class="d-block w-100" alt="Học tập không giới hạn">
+                                        <div class="carousel-caption carousel-caption-custom text-start text-white">
+                                            <span class="badge bg-primary mb-2">Lợi ích #1</span>
+                                            <h3 class="fw-bold mb-2">Học Tập Không Giới Hạn</h3>
+                                            <p class="small text-light opacity-90 mb-0">Truy cập hơn 500+ khóa học thực chiến từ cơ bản đến nâng cao về lập trình web hiện đại.</p>
+                                        </div>
+                                    </div>
+                                    <!-- Slide 2 -->
+                                    <div class="carousel-item h-100" data-bs-interval="4500">
+                                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" class="d-block w-100" alt="Hỗ trợ 1-1">
+                                        <div class="carousel-caption carousel-caption-custom text-start text-white">
+                                            <span class="badge bg-success mb-2">Lợi ích #2</span>
+                                            <h3 class="fw-bold mb-2">Kèm Cặp 1 - 1 Tận Tâm</h3>
+                                            <p class="small text-light opacity-90 mb-0">Đội ngũ mentor dày dặn kinh nghiệm luôn đồng hành gỡ lỗi và định hướng nghề nghiệp.</p>
+                                        </div>
+                                    </div>
+                                    <!-- Slide 3 -->
+                                    <div class="carousel-item h-100" data-bs-interval="4500">
+                                        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80" class="d-block w-100" alt="Cơ hội nghề nghiệp">
+                                        <div class="carousel-caption carousel-caption-custom text-start text-white">
+                                            <span class="badge bg-warning text-dark mb-2">Lợi ích #3</span>
+                                            <h3 class="fw-bold mb-2">Cơ Hội Việc Làm Rộng Mở</h3>
+                                            <p class="small text-light opacity-90 mb-0">Kết nối trực tiếp tới 100+ doanh nghiệp phần mềm hàng đầu ngay sau khi hoàn thành khóa học.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#benefitsCarousel" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#benefitsCarousel" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- CỘT 2: FORM ĐĂNG KÝ NGƯỜI DÙNG (col-12 col-lg-6) -->
+                        <div class="col-12 col-lg-6 p-4 p-md-5 d-flex flex-column justify-content-center">
+                            <div class="text-center mb-4">
+                                <h2 class="h3 fw-bold text-dark mb-2">Đăng Ký Tài Khoản</h2>
+                                <p class="text-muted small mb-0">Bắt đầu hành trình chinh phục kỹ năng lập trình đỉnh cao</p>
+                            </div>
+
+                            <form action="#" method="POST">
+                                <!-- 1. Họ và tên (Input Group) -->
+                                <div class="mb-3">
+                                    <label for="regName" class="form-label fw-semibold small text-secondary">Họ và tên</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light text-muted"><i class="fas fa-user"></i></span>
+                                        <input type="text" class="form-control" id="regName" placeholder="Nhập họ và tên đầy đủ" required>
+                                    </div>
+                                </div>
+
+                                <!-- 2. Email (Input Group) -->
+                                <div class="mb-3">
+                                    <label for="regEmail" class="form-label fw-semibold small text-secondary">Địa chỉ Email</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light text-muted"><i class="fas fa-envelope"></i></span>
+                                        <input type="email" class="form-control" id="regEmail" placeholder="name@example.com" required>
+                                    </div>
+                                </div>
+
+                                <!-- 3. Mật khẩu (Input Group) -->
+                                <div class="mb-3">
+                                    <label for="regPass" class="form-label fw-semibold small text-secondary">Mật khẩu</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light text-muted"><i class="fas fa-lock"></i></span>
+                                        <input type="password" class="form-control" id="regPass" placeholder="Tối thiểu 8 ký tự" required>
+                                    </div>
+                                </div>
+
+                                <!-- 4. Xác nhận mật khẩu (Input Group) -->
+                                <div class="mb-4">
+                                    <label for="regConfirmPass" class="form-label fw-semibold small text-secondary">Xác nhận mật khẩu</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-light text-muted"><i class="fas fa-shield-halved"></i></span>
+                                        <input type="password" class="form-control" id="regConfirmPass" placeholder="Nhập lại mật khẩu" required>
+                                    </div>
+                                </div>
+
+                                <!-- Điều khoản -->
+                                <div class="form-check mb-4">
+                                    <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                                    <label class="form-check-label small text-muted" for="termsCheck">
+                                        Tôi đồng ý với <a href="#" class="text-decoration-none">Điều khoản sử dụng</a> và <a href="#" class="text-decoration-none">Chính sách dịch vụ</a>.
+                                    </label>
+                                </div>
+
+                                <!-- Nút Submit -->
+                                <div class="d-grid mb-3">
+                                    <button type="submit" class="btn btn-primary btn-lg fw-semibold shadow-sm">
+                                        Đăng Ký Ngay <i class="fas fa-arrow-right ms-1"></i>
+                                    </button>
+                                </div>
+
+                                <!-- Chuyển trang đăng nhập -->
+                                <p class="text-center small text-muted mb-0">
+                                    Đã có tài khoản? <a href="#" class="text-primary fw-semibold text-decoration-none">Đăng nhập</a>
+                                </p>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nhúng Bootstrap 5.3.0 JS Bundle từ CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
