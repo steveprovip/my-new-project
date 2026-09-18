@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Landing Page - Responsive Bootstrap Project</title>
+
+    <!-- Bootstrap 4.6.0 CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- Font Awesome 5 Pro / Free CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Local Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+
+    <!-- jQuery & Bootstrap Bundle JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <!-- 1️⃣ HEADER & BOOK OVERVIEW -->
+    <header id="home">
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="#"><i class="fas fa-book-reader fa-2x mr-2"></i>Books</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-align-right text-light"></i>
+                </button>
+            
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="mr-auto"></div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#home">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#author">AUTHOR</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#features">FEATURES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#prices">PRICES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#download">DOWNLOAD</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#reviews">READER'S SAY</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Book Overview -->
+        <div class="container text-center">
+            <div class="row align-items-center">
+                <div class="col-md-7 col-sm-12 text-white text-md-left">
+                    <h6 class="text-uppercase tracking-wider">AUTHOR: DAILY TUITION</h6>
+                    <h1 class="display-4 font-weight-bold">EXCITING ADVENTURE</h1>
+                    <p class="lead">Khám phá hành trình phiêu lưu kỳ thú và những bí quyết lập trình đỉnh cao được đúc kết từ những chuyên gia công nghệ hàng đầu.</p>
+                    <a href="#prices" class="btn btn-light primary-btn px-5 py-3 font-weight-bold">
+                        Buy now for $5.99
+                    </a>
+                </div>
+                <div class="col-md-5 col-sm-12 mt-4 mt-md-0">
+                    <img src="assets/header-img.png" alt="Book Cover" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 2️⃣ AUTHOR -->
+        <section class="section-1" id="author">
+            <div class="container text-center">
+                <div class="row align-items-center">
+                    <div class="col-md-6 col-12 mb-4 mb-md-0">
+                        <div>
+                            <img src="assets/pexels-photo-1904769.jpeg" alt="Author Mr. Devid Smith" class="img-fluid rounded shadow">
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 text-md-left">
+                        <div class="panel">
+                            <h1 class="font-weight-bold">Mr. Devid Smith</h1>
+                            <p class="pt-4 text-muted">Tác giả với hơn 15 năm kinh nghiệm trong lĩnh vực kiến trúc phần mềm và truyền cảm hứng cho hàng triệu lập trình viên trên toàn thế giới.</p>
+                            <p class="text-muted">Cuốn sách là tập hợp những trải nghiệm thực tế, những bài học vượt qua thách thức và các phương pháp tư duy sáng tạo giúp độc giả không chỉ làm chủ công nghệ mà còn phát triển tư duy giải quyết vấn đề xuất sắc.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3️⃣ FEATURES -->
+        <section class="section-2 container-fluid p-0" id="features">
+            <div class="cover">
+                <div class="content text-center">
+                    <h1 class="font-weight-bold">Some Features That Make Us Unique</h1>
+                    <p>Những giá trị cốt lõi và số liệu ấn tượng minh chứng cho chất lượng xuất bản.</p>
+                </div>
+            </div>
+            <div class="container-fluid text-center">
+                <div class="d-flex flex-wrap justify-content-center numbers">
+                    <div class="rect">
+                        <h1>2345</h1>
+                        <p>Happy Clients</p>
+                    </div>
+                    <div class="rect">
+                        <h1>6784</h1>
+                        <p>Copies Sold</p>
+                    </div>
+                    <div class="rect">
+                        <h1>1056</h1>
+                        <p>Reviews Given</p>
+                    </div>
+                    <div class="rect">
+                        <h1>9152</h1>
+                        <p>Total Community</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4️⃣ PRICES -->
+            <div class="purchase text-center" id="prices">
+                <h1 class="font-weight-bold">Purchase Whatever You Want</h1>
+                <p class="text-muted">Lựa chọn định dạng phù hợp nhất với nhu cầu đọc và nghiên cứu của bạn.</p>
+
+                <div class="cards">
+                    <div class="d-flex flex-row justify-content-center flex-wrap">
+                        <div class="card m-3">
+                            <div class="card-body">
+                                <div class="title mb-3">
+                                    <h5 class="card-title font-weight-bold">PDF Version</h5>
+                                </div>
+                                <p class="card-text text-muted">
+                                    Bản PDF tối ưu đọc trên máy tính bảng và máy tính để bàn với liên kết bookmark thông minh.
+                                </p>
+                                <div class="pricing mt-4">
+                                    <h1 class="font-weight-bold text-primary">$77.99</h1>
+                                    <a href="#" class="btn btn-dark py-2 px-5 mb-3 primary-btn">Purchase Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card m-3">
+                            <div class="card-body">
+                                <div class="title mb-3">
+                                    <h5 class="card-title font-weight-bold">E-book Bundle</h5>
+                                </div>
+                                <p class="card-text text-muted">
+                                    Định dạng ePub / Kindle kèm video bài giảng và mã nguồn thực hành kèm theo.
+                                </p>
+                                <div class="pricing mt-4">
+                                    <h1 class="font-weight-bold text-primary">$99.99</h1>
+                                    <a href="#" class="btn btn-dark py-2 px-5 mb-3 primary-btn">Purchase Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="card m-3">
+                            <div class="card-body">
+                                <div class="title mb-3">
+                                    <h5 class="card-title font-weight-bold">Print Copy</h5>
+                                </div>
+                                <p class="card-text text-muted">
+                                    Bìa cứng in màu cao cấp giao tận tay miễn phí toàn quốc kèm chữ ký lưu niệm của tác giả.
+                                </p>
+                                <div class="pricing mt-4">
+                                    <h1 class="font-weight-bold text-primary">$58.99</h1>
+                                    <a href="#" class="btn btn-dark py-2 px-5 mb-3 primary-btn">Purchase Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5️⃣ DOWNLOAD -->
+        <section class="section-3 container-fluid p-0 text-center" id="download">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 px-4">
+                    <h1 class="font-weight-bold">Download Our App for all Platforms</h1>
+                    <p class="text-muted mx-auto" style="max-width: 800px;">Trải nghiệm ứng dụng đọc sách điện tử tương tác đa nền tảng với tính năng đồng bộ ghi chú đám mây và nghe sách nói Audio Book tiện lợi mọi lúc mọi nơi.</p>
+                </div>
+            </div>
+            <div class="platform row justify-content-center mt-4">
+                <div class="col-md-4 col-sm-12 mb-3">
+                    <div class="desktop shadow-lg p-4 rounded bg-white">
+                        <div class="d-flex flex-row justify-content-center align-items-center">
+                            <i class="fas fa-desktop fa-3x text-primary mr-3"></i>
+                            <div class="text-left">
+                                <h4 class="m-0 font-weight-bold">Desktop App</h4>
+                                <p class="text-muted m-0">Windows & macOS</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 mb-3">
+                    <div class="desktop shadow-lg p-4 rounded bg-white">
+                        <div class="d-flex flex-row justify-content-center align-items-center">
+                            <i class="fas fa-mobile-alt fa-3x text-primary mr-3"></i>
+                            <div class="text-left">
+                                <h4 class="m-0 font-weight-bold">Mobile App</h4>
+                                <p class="text-muted m-0">iOS & Android</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6️⃣ READER’S SAY -->
+        <section class="section-4 py-5" id="reviews">
+            <div class="container text-center mb-4">
+                <h1 class="font-weight-bold">What our Reader's Say about us</h1>
+                <p class="text-muted">Cảm nhận và đánh giá chân thực từ các độc giả và chuyên gia hàng đầu.</p>
+            </div>
+            <div class="team row justify-content-center">
+                <!-- Review 1 -->
+                <div class="col-md-4 col-12 text-center mb-4">
+                    <div class="card p-3 shadow-lg h-100 border-0">
+                        <div class="card-img-top text-center">
+                            <img src="assets/UI-face-3.jpg" class="rounded-circle p-2 mx-auto" style="width: 120px; height: 120px; object-fit: cover;" alt="Blalock Jolene">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold">Blalock Jolene</h4>
+                            <p class="card-text text-muted small">
+                                "Cuốn sách đã thay đổi hoàn toàn cách tôi tiếp cận với kiến trúc phần mềm hiện đại. Những ví dụ thực tế và chỉ dẫn từng bước vô cùng trực quan và dễ áp dụng."
+                            </p>
+                            <p class="text-primary font-weight-bold mb-0">Tech Lead at Google</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 (Carousel slider) -->
+                <div class="col-md-4 col-12 text-center mb-4">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide h-100" data-ride="carousel">
+                        <div class="carousel-inner h-100">
+                            <div class="carousel-item active h-100">
+                                <div class="card p-3 shadow-lg h-100 border-0">
+                                    <div class="card-img-top text-center">
+                                        <img src="assets/UI-face-1.jpg" class="rounded-circle p-2 mx-auto" style="width: 120px; height: 120px; object-fit: cover;" alt="Allen Agnes">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title font-weight-bold">Allen Agnes</h4>
+                                        <p class="card-text text-muted small">
+                                            "Tuyệt phẩm dành cho bất kỳ ai muốn nâng tầm kỹ năng lập trình web. Một cẩm nang gối đầu giường không thể thiếu của lập trình viên!"
+                                        </p>
+                                        <p class="text-primary font-weight-bold mb-0">Engineering Manager at Meta</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item h-100">
+                                <div class="card p-3 shadow-lg h-100 border-0">
+                                    <div class="card-img-top text-center">
+                                        <img src="assets/UI-face-2.jpg" class="rounded-circle p-2 mx-auto" style="width: 120px; height: 120px; object-fit: cover;" alt="Amiel Barbara">
+                                    </div>
+                                    <div class="card-body">
+                                        <h4 class="card-title font-weight-bold">Amiel Barbara</h4>
+                                        <p class="card-text text-muted small">
+                                            "Bố cục rõ ràng, hình ảnh sống động và lượng kiến thức thực chiến dày dặn. Xứng đáng với từng xu đầu tư."
+                                        </p>
+                                        <p class="text-primary font-weight-bold mb-0">Staff Software Engineer at Apple</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="col-md-4 col-12 text-center mb-4">
+                    <div class="card p-3 shadow-lg h-100 border-0">
+                        <div class="card-img-top text-center">
+                            <img src="assets/UI-face-4.jpg" class="rounded-circle p-2 mx-auto" style="width: 120px; height: 120px; object-fit: cover;" alt="Olivia Louis">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title font-weight-bold">Olivia Louis</h4>
+                            <p class="card-text text-muted small">
+                                "Rất ấn tượng với phần thiết kế Responsive và cách tác giả truyền tải những khái niệm phức tạp một cách tự nhiên, dễ hiểu."
+                            </p>
+                            <p class="text-primary font-weight-bold mb-0">Director of Product at Amazon</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 7️⃣ FOOTER -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-sm-12 mb-4">
+                    <h4 class="text-light font-weight-bold mb-3"><i class="fas fa-book-reader mr-2"></i>About Us</h4>
+                    <p class="text-muted">Chúng tôi cam kết mang lại những ấn phẩm công nghệ và giáo dục lập trình có giá trị thực tiễn cao nhất cho cộng đồng lập trình viên Việt Nam và thế giới.</p>
+                    <p class="text-muted small">Copyright © 2026 All rights reserved | Dự án giới thiệu sách chuẩn Responsive | CodeGym</p>
+                </div>
+                <div class="col-md-4 col-sm-12 mb-4">
+                    <h4 class="text-light font-weight-bold mb-3">Newsletter</h4>
+                    <p class="text-muted">Đăng ký nhận thông báo về các chương và ebook mới nhất</p>
+                    <form class="form-inline">
+                        <div class="input-group w-100">
+                            <input type="email" class="form-control bg-secondary text-white border-0" placeholder="Nhập email của bạn...">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button"><i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3 col-sm-12 mb-4 text-md-right">
+                    <h4 class="text-light font-weight-bold mb-3">Follow Us</h4>
+                    <p class="text-muted">Kết nối với chúng tôi qua mạng xã hội</p>
+                    <div class="fs-5">
+                        <a href="#" class="text-light mr-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-light mr-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-light mr-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
