@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Thực hành] CSS | flex-basis Property</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-header">
+        <h1>[Thực hành] CSS | flex-basis Property</h1>
+        <p class="subtitle">Tìm hiểu và ứng dụng thuộc tính xác định kích thước ban đầu (initial main size) của Flex Item</p>
+    </div>
+
+    <!-- TÓM TẮT LÝ THUYẾT -->
+    <div class="theory-card">
+        <h2>Lý thuyết tóm tắt</h2>
+        <p>Thuộc tính <code>flex-basis</code> trong CSS được sử dụng để chỉ định <strong>kích thước ban đầu</strong> của một flex item trước khi không gian còn lại được phân bổ bởi <code>flex-grow</code> hoặc thu nhỏ bởi <code>flex-shrink</code>.</p>
+        <div class="syntax-box">
+            <code>flex-basis: number | auto | initial | inherit;</code>
+        </div>
+        <ul>
+            <li><strong>number (đơn vị độ dài: px, %, em, rem...):</strong> Xác định độ dài ban đầu cố định của item theo trục chính (main axis).</li>
+            <li><strong>auto (mặc định):</strong> Kích thước ban đầu tự động tính theo thuộc tính <code>width/height</code> hoặc nội dung thực tế của item.</li>
+            <li><strong>initial:</strong> Đặt thuộc tính về giá trị mặc định ban đầu (auto).</li>
+            <li><strong>inherit:</strong> Kế thừa giá trị từ phần tử cha.</li>
+        </ul>
+    </div>
+
+    <!-- VÍ DỤ 1: ĐƠN VỊ ĐỘ DÀI CỐ ĐỊNH (px, %) -->
+    <section class="demo-section">
+        <div class="section-title">
+            <h3>Ví dụ 1: Sử dụng đơn vị độ dài (number: px, %)</h3>
+            <span class="badge">flex-basis: 100px / 250px / 50%</span>
+        </div>
+        <p class="desc">Các phần tử có kích thước ban đầu khác nhau được quy định trực tiếp bằng <code>flex-basis</code>.</p>
+        <div class="code-box"><code>item-2 { flex-basis: 250px; } | item-3 { flex-basis: 150px; }</code></div>
+        <div class="flex-container example-1">
+            <div class="flex-item item-1">Item 1 (100px)</div>
+            <div class="flex-item item-2">Item 2 (250px)</div>
+            <div class="flex-item item-3">Item 3 (150px)</div>
+            <div class="flex-item item-4">Item 4 (100px)</div>
+        </div>
+    </section>
+
+    <!-- VÍ DỤ 2: SO SÁNH AUTO VS INITIAL VS CỐ ĐỊNH -->
+    <section class="demo-section">
+        <div class="section-title">
+            <h3>Ví dụ 2: So sánh auto, initial và tỉ lệ phần trăm</h3>
+            <span class="badge badge-primary">Tỉ lệ bố cục cột</span>
+        </div>
+        <p class="desc">Chia cột trang web: Cột Sidebar có kích thước khởi đầu <code>flex-basis: 220px</code>, Main Content là <code>flex-basis: auto</code> kết hợp độ co giãn.</p>
+        <div class="code-box"><code>.sidebar { flex-basis: 220px; } .main { flex-basis: auto; flex-grow: 1; }</code></div>
+        <div class="flex-container example-2">
+            <div class="flex-item col-sidebar">
+                <h4>Sidebar</h4>
+                <p>flex-basis: 220px</p>
+            </div>
+            <div class="flex-item col-content">
+                <h4>Nội dung chính</h4>
+                <p>flex-basis: auto; flex-grow: 1 (Lấp đầy không gian còn lại)</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

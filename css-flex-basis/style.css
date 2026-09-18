@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    padding: 30px 20px;
+    line-height: 1.6;
+}
+
+.page-header {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+}
+
+.page-header h1 {
+    color: #0f172a;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #64748b;
+    font-size: 16px;
+}
+
+.subtitle code {
+    background-color: #e2e8f0;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #0284c7;
+}
+
+.theory-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 24px;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #0284c7;
+}
+
+.theory-card h2 {
+    color: #0369a1;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.syntax-box {
+    background-color: #0f172a;
+    color: #38bdf8;
+    padding: 12px 18px;
+    border-radius: 6px;
+    margin: 12px 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+}
+
+.theory-card ul {
+    margin-left: 20px;
+    color: #334155;
+}
+
+.theory-card li {
+    margin-bottom: 6px;
+}
+
+.demo-section {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 24px;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.section-title h3 {
+    color: #0f172a;
+    font-size: 18px;
+}
+
+.badge {
+    background-color: #64748b;
+    color: #fff;
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 12px;
+}
+
+.badge-primary {
+    background-color: #0284c7;
+}
+
+.desc {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.code-box {
+    display: inline-block;
+    background-color: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 13px;
+    color: #0284c7;
+    margin-bottom: 16px;
+}
+
+/* =======================================
+   VÍ DỤ 1: ĐƠN VỊ ĐỘ DÀI
+   ======================================= */
+.flex-container.example-1 {
+    display: flex;
+    background-color: #1e293b;
+    padding: 16px;
+    border-radius: 8px;
+    gap: 12px;
+    overflow-x: auto;
+}
+
+.example-1 .flex-item {
+    background-color: #0284c7;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.example-1 .item-1 {
+    flex-basis: 100px;
+}
+
+.example-1 .item-2 {
+    flex-basis: 250px;
+    background-color: #0ea5e9;
+}
+
+.example-1 .item-3 {
+    flex-basis: 150px;
+}
+
+.example-1 .item-4 {
+    flex-basis: 100px;
+}
+
+/* =======================================
+   VÍ DỤ 2: BỐ CỤC THỰC TẾ (AUTO VS CỐ ĐỊNH)
+   ======================================= */
+.flex-container.example-2 {
+    display: flex;
+    background-color: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    padding: 16px;
+    border-radius: 8px;
+    gap: 16px;
+}
+
+.example-2 .col-sidebar {
+    flex-basis: 220px;
+    flex-shrink: 0;
+    background-color: #3b82f6;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.example-2 .col-content {
+    flex-basis: auto;
+    flex-grow: 1;
+    background-color: #ffffff;
+    color: #1e293b;
+    border: 1px solid #cbd5e1;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+@media (max-width: 600px) {
+    .flex-container.example-2 {
+        flex-direction: column;
+    }
+    .example-2 .col-sidebar {
+        flex-basis: auto;
+    }
+}
