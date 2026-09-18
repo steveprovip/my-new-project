@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* ========================================================
+   BỐ CỤC CHÍNH BẰNG CSS GRID (DESKTOP)
+   Bao gồm 5 phần: header, navigation, main-content, sidebar, footer
+   ======================================================== */
+.grid-layout {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: 
+        "header header"
+        "nav nav"
+        "main sidebar"
+        "footer footer";
+    gap: 16px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 16px;
+    min-height: 100vh;
+}
+
+/* 1. Header */
+.header {
+    grid-area: header;
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+    color: #ffffff;
+    padding: 24px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 28px;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+}
+
+.header p {
+    font-size: 15px;
+    color: #cbd5e1;
+}
+
+/* 2. Navigation */
+.navigation {
+    grid-area: nav;
+    background-color: #0f172a;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0 10px;
+}
+
+.nav-list li a {
+    display: block;
+    padding: 14px 18px;
+    color: #e2e8f0;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-list li a:hover,
+.nav-list li a.active {
+    background-color: #2563eb;
+    color: #ffffff;
+    border-radius: 6px;
+}
+
+/* 3. Main Content */
+.main-content {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.article-card {
+    background-color: #ffffff;
+    padding: 26px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e8f0;
+}
+
+.article-card h2 {
+    color: #0f172a;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.article-meta {
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.article-card p {
+    margin-bottom: 14px;
+    color: #334155;
+    font-size: 15px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.feature-box {
+    background-color: #ffffff;
+    padding: 18px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.feature-box h3 {
+    font-size: 15px;
+    color: #1e40af;
+    margin-bottom: 8px;
+}
+
+.feature-box p {
+    font-size: 13px;
+    color: #64748b;
+}
+
+/* 4. Sidebar */
+.sidebar {
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.widget {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.06);
+}
+
+.widget h3 {
+    font-size: 17px;
+    color: #0f172a;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #2563eb;
+}
+
+.widget-list {
+    list-style: none;
+}
+
+.widget-list li {
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed #e2e8f0;
+}
+
+.widget-list li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.widget-list li a {
+    text-decoration: none;
+    color: #334155;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.widget-list li a:hover {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+.ads-box {
+    background: linear-gradient(135deg, #eff6ff, #dbeafe);
+    border: 1px solid #bfdbfe;
+}
+
+.ads-box .badge {
+    background-color: #2563eb;
+    color: white;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.ads-box h4 {
+    font-size: 15px;
+    color: #1e3a8a;
+    margin-bottom: 8px;
+}
+
+.ads-box p {
+    font-size: 13px;
+    color: #475569;
+    margin-bottom: 14px;
+}
+
+.btn-register {
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-register:hover {
+    background-color: #1d4ed8;
+}
+
+/* 5. Footer */
+.footer {
+    grid-area: footer;
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.footer-content p {
+    margin-bottom: 4px;
+}
+
+.footer-sub {
+    font-size: 12px;
+    color: #64748b;
+}
+
+/* ========================================================
+   YÊU CẦU RESPONSIVE: TRÊN MOBILE (<= 768px)
+   Xếp các phần tử theo chiều dọc: Header -> Nav -> Main -> Sidebar -> Footer
+   ======================================================== */
+@media (max-width: 768px) {
+    .grid-layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: 
+            "header"
+            "nav"
+            "main"
+            "sidebar"
+            "footer";
+        padding: 10px;
+        gap: 12px;
+    }
+
+    .nav-list {
+        flex-direction: column;
+    }
+
+    .nav-list li a {
+        padding: 10px 14px;
+        border-bottom: 1px solid #1e293b;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}

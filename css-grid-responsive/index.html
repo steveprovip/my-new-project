@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Tạo bố cục responsive bằng CSS Grid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid-layout">
+        <!-- 1. HEADER -->
+        <header class="header">
+            <div class="header-content">
+                <h1>TechNews Portal</h1>
+                <p>Kênh tin tức công nghệ & lập trình hàng đầu</p>
+            </div>
+        </header>
+
+        <!-- 2. NAVIGATION -->
+        <nav class="navigation">
+            <ul class="nav-list">
+                <li><a href="#" class="active">Trang chủ</a></li>
+                <li><a href="#">Tin tức mới</a></li>
+                <li><a href="#">Lập trình Web</a></li>
+                <li><a href="#">Trí tuệ nhân tạo (AI)</a></li>
+                <li><a href="#">Diễn đàn</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+
+        <!-- 3. MAIN CONTENT -->
+        <main class="main-content">
+            <article class="article-card">
+                <h2>Bố cục Responsive với CSS Grid: Đột phá trong thiết kế Web hiện đại</h2>
+                <div class="article-meta">Đăng bởi <strong>Ban Biên Tập</strong> | Ngày 18/09/2026 | Chuyên mục: CSS Grid</div>
+                <p>CSS Grid Layout là hệ thống bố cục lưới hai chiều mạnh mẽ nhất trong CSS hiện nay. Khác với Flexbox (chủ yếu xử lý một chiều theo hàng hoặc cột), Grid cho phép lập trình viên kiểm soát đồng thời cả hai chiều hàng ngang và cột dọc.</p>
+                <p>Bằng cách sử dụng các thuộc tính trực quan như <code>grid-template-areas</code>, <code>grid-template-columns</code>, và media query, chúng ta có thể dễ dàng chuyển đổi giao diện từ đa cột phức tạp trên Desktop sang giao diện dạng khối xếp dọc tối ưu trên Mobile chỉ với vài dòng mã CSS.</p>
+            </article>
+
+            <div class="feature-grid">
+                <div class="feature-box">
+                    <h3>Khả năng thích ứng cao</h3>
+                    <p>Tự động điều chỉnh kích thước theo viewport mà không làm vỡ cấu trúc giao diện.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>Cú pháp trực quan</h3>
+                    <p>Sử dụng <code>grid-template-areas</code> mô phỏng chính xác sơ đồ trực quan của trang.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>Hiệu năng tối ưu</h3>
+                    <p>CSS Grid được render trực tiếp bởi trình duyệt, tối ưu tốc độ và không cần thư viện cồng kềnh.</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- 4. SIDEBAR -->
+        <aside class="sidebar">
+            <div class="widget">
+                <h3>Tin tức nổi bật</h3>
+                <ul class="widget-list">
+                    <li><a href="#">CSS Grid vs Flexbox: Khi nào nên dùng?</a></li>
+                    <li><a href="#">Xu hướng thiết kế UI/UX năm 2026</a></li>
+                    <li><a href="#">Tối ưu trải nghiệm Mobile-First</a></li>
+                    <li><a href="#">Mẹo căn chỉnh bố cục với gap</a></li>
+                </ul>
+            </div>
+
+            <div class="widget ads-box">
+                <span class="badge">Quảng cáo</span>
+                <h4>Khóa học Web Frontend Chuyên Sâu</h4>
+                <p>Nắm vững HTML5, CSS3, JavaScript và Frameworks cùng giảng viên chuyên gia.</p>
+                <button class="btn-register">Tìm hiểu ngay</button>
+            </div>
+        </aside>
+
+        <!-- 5. FOOTER -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2026 TechNews Portal - Bài tập tạo bố cục responsive bằng CSS Grid | CodeGym</p>
+                <p class="footer-sub">Thiết kế chuẩn Responsive: Desktop đa cột &bull; Mobile dạng cột xếp dọc</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
