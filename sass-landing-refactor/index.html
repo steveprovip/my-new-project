@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Tái Cấu Trúc Bằng SASS - CodeGym</title>
+    <!-- Nhúng CSS được biên dịch tự động từ kiến trúc SASS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- 1️⃣ BÀI TẬP: DỰNG NAVIGATION VÀ HEADER CỦA LANDING PAGE -->
+    <nav class="navbar">
+        <div class="container nav-wrap">
+            <div class="logo">Sass<span>Craft</span></div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Trang chủ</a></li>
+                <li><a href="#products">Sản phẩm nổi bật</a></li>
+                <li><a href="#stats">Số liệu thống kê</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero-header">
+        <div class="container">
+            <span class="hero-badge">Kiến Trúc SASS 7-1 Chuẩn Hóa</span>
+            <h1>Tái Cấu Trúc Toàn Bộ Landing Page Bằng SASS</h1>
+            <p>Hợp nhất 4 bài tập giao diện (Header/Nav, Sản phẩm, Thống kê, Footer) thành một hệ thống mã nguồn module sạch, dễ mở rộng và chuẩn Responsive.</p>
+            <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                <a href="#products" class="btn btn-primary">Khám phá sản phẩm</a>
+                <a href="#stats" class="btn btn-outline">Xem số liệu</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2️⃣ BÀI TẬP: DỰNG PHẦN SẢN PHẨM NỔI BẬT -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Sản Phẩm Nổi Bật</h2>
+                <p>Những giải pháp công nghệ và khóa học được yêu thích nhất</p>
+            </div>
+            <div class="products-grid">
+                <!-- Sản phẩm 1 -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80" alt="SASS Masterclass">
+                    <div class="card-body">
+                        <div class="tag">Frontend Architecture</div>
+                        <h3>SASS & SCSS Masterclass</h3>
+                        <p>Làm chủ biến, mixins, functions, nesting và cấu trúc 7-1 pattern cho dự án thực tế.</p>
+                        <div class="price-row">
+                            <span class="price">499.000đ</span>
+                            <a href="#" class="btn btn-primary" style="padding: 8px 18px; font-size: 14px;">Đăng ký</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sản phẩm 2 -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80" alt="Responsive Web Design">
+                    <div class="card-body">
+                        <div class="tag">UI/UX Design</div>
+                        <h3>Responsive Web Pro</h3>
+                        <p>Xây dựng bố cục thích ứng linh hoạt đa thiết bị với CSS Flexbox & CSS Grid chuyên sâu.</p>
+                        <div class="price-row">
+                            <span class="price">599.000đ</span>
+                            <a href="#" class="btn btn-primary" style="padding: 8px 18px; font-size: 14px;">Đăng ký</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sản phẩm 3 -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80" alt="Bootstrap Framework">
+                    <div class="card-body">
+                        <div class="tag">Rapid Prototyping</div>
+                        <h3>Bootstrap 5 Toàn Tập</h3>
+                        <p>Tối ưu tốc độ phát triển giao diện doanh nghiệp với hệ thống Grid System & Components.</p>
+                        <div class="price-row">
+                            <span class="price">399.000đ</span>
+                            <a href="#" class="btn btn-primary" style="padding: 8px 18px; font-size: 14px;">Đăng ký</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3️⃣ BÀI TẬP: DỰNG PHẦN SỐ LIỆU THỐNG KÊ -->
+    <section class="stats-section" id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">15,000+</div>
+                    <div class="stat-label">Học viên tốt nghiệp</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">98.5%</div>
+                    <div class="stat-label">Có việc làm ngay</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">120+</div>
+                    <div class="stat-label">Dự án thực chiến</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Doanh nghiệp đối tác</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4️⃣ BÀI TẬP: DỰNG PHẦN FOOTER -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Về SassCraft</h4>
+                    <p>Nền tảng đào tạo lập trình thực chiến giúp bạn nâng cao kỹ năng Frontend với các công nghệ và kiến trúc mã nguồn hiện đại nhất.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Khóa học</h4>
+                    <ul>
+                        <li><a href="#">SASS / SCSS Cơ Bản</a></li>
+                        <li><a href="#">CSS Flexbox & Grid</a></li>
+                        <li><a href="#">Bootstrap 5 Pro</a></li>
+                        <li><a href="#">JavaScript Nâng Cao</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hỗ trợ</h4>
+                    <ul>
+                        <li><a href="#">Trung tâm trợ giúp</a></li>
+                        <li><a href="#">Cộng đồng học viên</a></li>
+                        <li><a href="#">Tài liệu tham khảo</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Liên hệ</h4>
+                    <p>Hotline: 0988 123 456<br>Email: support@sasscraft.vn<br>Hà Nội & TP. Hồ Chí Minh</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SassCraft. [Bài tập] Tái cấu trúc mã CSS của các bài tập đã làm | CodeGym</p>
+                <p>Tái cấu trúc 4 phần Landing Page bằng kiến trúc SASS module chuẩn hóa.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

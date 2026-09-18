@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #1e293b;
+  background-color: #f8fafc;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.navbar {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.navbar .nav-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+}
+.navbar .logo span {
+  color: #2563eb;
+}
+.navbar .nav-links {
+  display: flex;
+  gap: 24px;
+}
+.navbar .nav-links li a {
+  color: #cbd5e1;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.navbar .nav-links li a:hover, .navbar .nav-links li a.active {
+  color: white;
+}
+@media (max-width: 768px) {
+  .navbar .nav-links {
+    display: none;
+  }
+}
+
+.hero-header {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+}
+.hero-header .hero-badge {
+  background: rgba(37, 99, 235, 0.2);
+  color: #60a5fa;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+.hero-header h1 {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+@media (max-width: 768px) {
+  .hero-header h1 {
+    font-size: 28px;
+  }
+}
+.hero-header p {
+  font-size: 18px;
+  color: #94a3b8;
+  max-width: 680px;
+  margin: 0 auto 24px auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.25s ease;
+}
+.btn-primary {
+  background: #2563eb;
+  color: white;
+}
+.btn-primary:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+.btn-outline {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.products-section {
+  padding: 60px 0;
+}
+.products-section .section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.products-section .section-header h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+.products-section .section-header p {
+  color: #64748b;
+  font-size: 16px;
+}
+.products-section .products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+@media (max-width: 992px) {
+  .products-section .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .products-section .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.products-section .product-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.products-section .product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+}
+.products-section .product-card {
+  overflow: hidden;
+}
+.products-section .product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+.products-section .product-card .card-body {
+  padding: 24px;
+}
+.products-section .product-card .card-body .tag {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #2563eb;
+  margin-bottom: 6px;
+}
+.products-section .product-card .card-body h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #1e293b;
+}
+.products-section .product-card .card-body p {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+.products-section .product-card .card-body .price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+.products-section .product-card .card-body .price-row .price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1d4ed8;
+}
+
+.stats-section {
+  background: linear-gradient(135deg, #2563eb, #0d9488);
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+}
+.stats-section .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+@media (max-width: 992px) {
+  .stats-section .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .stats-section .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.stats-section .stat-item {
+  padding: 24px;
+}
+.stats-section .stat-item .stat-number {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  letter-spacing: -1px;
+}
+.stats-section .stat-item .stat-label {
+  font-size: 16px;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.footer {
+  background: #0f172a;
+  color: #94a3b8;
+  padding: 60px 0 24px 0;
+}
+.footer .footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+@media (max-width: 992px) {
+  .footer .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .footer .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.footer .footer-col h4 {
+  color: white;
+  font-size: 16px;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+.footer .footer-col p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+.footer .footer-col ul li {
+  margin-bottom: 8px;
+}
+.footer .footer-col ul li a {
+  font-size: 14px;
+  transition: color 0.2s;
+}
+.footer .footer-col ul li a:hover {
+  color: white;
+}
+.footer .footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+@media (max-width: 768px) {
+  .footer .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

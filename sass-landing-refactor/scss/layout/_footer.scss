@@ -1,0 +1,62 @@
+// layout/_footer.scss
+// 4️⃣ BÀI TẬP: DỰNG PHẦN FOOTER
+.footer {
+  background: $dark-bg;
+  color: #94a3b8;
+  padding: $spacing-xl 0 24px 0;
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: $spacing-lg;
+    margin-bottom: $spacing-xl;
+
+    @include responsive(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include responsive(mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .footer-col {
+    h4 {
+      color: white;
+      font-size: 16px;
+      margin-bottom: $spacing-sm;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+
+      a {
+        font-size: 14px;
+        transition: color 0.2s;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 24px;
+    @include flex-between;
+    font-size: 13px;
+
+    @include responsive(mobile) {
+      flex-direction: column;
+      gap: 12px;
+      text-align: center;
+    }
+  }
+}

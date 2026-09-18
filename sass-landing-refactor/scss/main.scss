@@ -1,0 +1,11 @@
+// main.scss - Tích hợp toàn bộ các phần của Landing Page
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+@import "base/reset";
+
+@import "layout/header";
+@import "components/buttons";
+@import "components/products";
+@import "components/stats";
+@import "layout/footer";

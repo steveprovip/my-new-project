@@ -1,0 +1,33 @@
+// abstracts/_mixins.scss
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin card-style {
+  background: $card-bg;
+  border-radius: $border-radius-md;
+  border: 1px solid $border-color;
+  box-shadow: $shadow-sm;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $shadow-md;
+  }
+}
+
+@mixin responsive($bp) {
+  @if $bp == mobile {
+    @media (max-width: 768px) { @content; }
+  } @else if $bp == tablet {
+    @media (max-width: 992px) { @content; }
+  }
+}

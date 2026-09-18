@@ -1,0 +1,81 @@
+// layout/_header.scss
+// 1️⃣ BÀI TẬP: DỰNG NAVIGATION VÀ HEADER
+.navbar {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  .nav-wrap {
+    @include flex-between;
+  }
+
+  .logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+
+    span {
+      color: $primary-color;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    gap: $spacing-md;
+
+    li a {
+      color: #cbd5e1;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.2s;
+
+      &:hover, &.active {
+        color: white;
+      }
+    }
+
+    @include responsive(mobile) {
+      display: none;
+    }
+  }
+}
+
+.hero-header {
+  background: linear-gradient(135deg, $dark-bg, #1e293b);
+  color: white;
+  padding: $spacing-xl 0;
+  text-align: center;
+
+  .hero-badge {
+    background: rgba(37, 99, 235, 0.2);
+    color: #60a5fa;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: $spacing-sm;
+  }
+
+  h1 {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: $spacing-sm;
+    letter-spacing: -0.5px;
+
+    @include responsive(mobile) {
+      font-size: 28px;
+    }
+  }
+
+  p {
+    font-size: 18px;
+    color: #94a3b8;
+    max-width: 680px;
+    margin: 0 auto $spacing-md auto;
+  }
+}

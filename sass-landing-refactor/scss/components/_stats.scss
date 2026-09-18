@@ -1,0 +1,39 @@
+// components/_stats.scss
+// 3️⃣ BÀI TẬP: DỰNG PHẦN SỐ LIỆU THỐNG KÊ
+.stats-section {
+  background: linear-gradient(135deg, $primary-color, $secondary-color);
+  color: white;
+  padding: $spacing-xl 0;
+  text-align: center;
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $spacing-md;
+
+    @include responsive(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include responsive(mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .stat-item {
+    padding: $spacing-md;
+
+    .stat-number {
+      font-size: 48px;
+      font-weight: 800;
+      margin-bottom: 6px;
+      letter-spacing: -1px;
+    }
+
+    .stat-label {
+      font-size: 16px;
+      opacity: 0.9;
+      font-weight: 500;
+    }
+  }
+}
