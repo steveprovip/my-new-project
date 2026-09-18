@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Tạo Landing Page với Bootstrap và Hình Ảnh</title>
+    <!-- Nhúng Bootstrap 5.3.0 CSS từ CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        /* Banner với background image overlay gradient */
+        .hero-banner {
+            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), 
+                        url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            color: #ffffff;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .feature-box {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 12px;
+        }
+        .feature-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+        }
+        .feature-icon {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin: 0 auto 18px auto;
+        }
+        .intro-img {
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- THANH ĐIỀU HƯỚNG NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">
+                <span class="text-white">NextGen</span>Pro
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#intro">Giới thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Tính năng</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#cta">Đăng ký</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. BANNER: Hình ảnh lớn làm nền với tiêu đề trang (Hero Section) -->
+    <header class="hero-banner">
+        <div class="container py-5">
+            <h1 class="display-4 fw-bold mb-3">Kiến Tạo Tương Lai Số Cùng NextGen</h1>
+            <p class="lead mb-4 mx-auto" style="max-width: 750px;">
+                Nền tảng giải pháp công nghệ toàn diện giúp doanh nghiệp bứt phá doanh thu và nâng tầm trải nghiệm số của khách hàng.
+            </p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="#cta" class="btn btn-primary btn-lg px-4 fw-semibold shadow">Đăng Ký Ngay</a>
+                <a href="#intro" class="btn btn-outline-light btn-lg px-4">Xem Thêm</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. GIỚI THIỆU: Một hàng (row) chứa hình ảnh (img-fluid) + đoạn mô tả sản phẩm/dịch vụ -->
+    <section id="intro" class="container py-5 my-4">
+        <div class="row align-items-center g-5">
+            <!-- Cột hình ảnh với class img-fluid -->
+            <div class="col-12 col-lg-6 text-center">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" 
+                     alt="Đội ngũ công nghệ" 
+                     class="img-fluid intro-img">
+            </div>
+            <!-- Cột nội dung mô tả -->
+            <div class="col-12 col-lg-6">
+                <span class="badge bg-primary-subtle text-primary px-3 py-2 mb-3 fw-bold">Về giải pháp của chúng tôi</span>
+                <h2 class="display-6 fw-bold mb-3 text-dark">Đột phá quy trình với công nghệ hiện đại</h2>
+                <p class="lead text-secondary fs-6 mb-3">
+                    Chúng tôi mang đến bộ công cụ toàn diện giúp doanh nghiệp tự động hóa vận hành, tối ưu chi phí và tăng tốc độ xử lý dữ liệu theo thời gian thực.
+                </p>
+                <p class="text-muted">
+                    Bằng việc kết hợp kiến trúc đám mây bảo mật và giao diện người dùng Responsive thân thiện trên mọi kích thước màn hình, chúng tôi đảm bảo mọi thao tác của bạn đều diễn ra mượt mà và chính xác nhất.
+                </p>
+                <a href="#features" class="btn btn-outline-primary fw-semibold mt-2">Khám phá các tính năng &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. DANH SÁCH TÍNH NĂNG: Một row gồm 4 cột (col-md-6 col-lg-3), mỗi cột hiển thị icon + tiêu đề + mô tả ngắn -->
+    <section id="features" class="bg-light py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold mb-2">Tính năng vượt trội</h2>
+                <p class="text-muted">Tất cả những gì bạn cần để xây dựng hệ thống hoàn hảo</p>
+            </div>
+            <div class="row g-4">
+                <!-- Cột 1 -->
+                <div class="col-12 col-md-6 col-lg-3 text-center">
+                    <div class="card feature-box p-4 h-100 border-0 shadow-sm bg-white">
+                        <div class="feature-icon bg-primary-subtle text-primary">⚡</div>
+                        <h3 class="h5 fw-bold mb-2">Tốc độ siêu tốc</h3>
+                        <p class="small text-muted mb-0">Hệ thống tối ưu hóa dữ liệu mang lại thời gian phản hồi dưới 100ms.</p>
+                    </div>
+                </div>
+                <!-- Cột 2 -->
+                <div class="col-12 col-md-6 col-lg-3 text-center">
+                    <div class="card feature-box p-4 h-100 border-0 shadow-sm bg-white">
+                        <div class="feature-icon bg-success-subtle text-success">📱</div>
+                        <h3 class="h5 fw-bold mb-2">Chuẩn Responsive</h3>
+                        <p class="small text-muted mb-0">Tương thích hoàn hảo từ màn hình điện thoại, máy tính bảng đến máy tính để bàn.</p>
+                    </div>
+                </div>
+                <!-- Cột 3 -->
+                <div class="col-12 col-md-6 col-lg-3 text-center">
+                    <div class="card feature-box p-4 h-100 border-0 shadow-sm bg-white">
+                        <div class="feature-icon bg-warning-subtle text-warning">🔒</div>
+                        <h3 class="h5 fw-bold mb-2">Bảo mật cấp cao</h3>
+                        <p class="small text-muted mb-0">Mã hóa đa lớp chuẩn doanh nghiệp giúp dữ liệu của bạn luôn an toàn tuyệt đối.</p>
+                    </div>
+                </div>
+                <!-- Cột 4 -->
+                <div class="col-12 col-md-6 col-lg-3 text-center">
+                    <div class="card feature-box p-4 h-100 border-0 shadow-sm bg-white">
+                        <div class="feature-icon bg-info-subtle text-info">🤝</div>
+                        <h3 class="h5 fw-bold mb-2">Hỗ trợ tận tâm</h3>
+                        <p class="small text-muted mb-0">Đội ngũ kỹ thuật túc trực 24/7 giải đáp mọi thắc mắc và hỗ trợ triển khai.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. NÚT KÊU GỌI HÀNH ĐỘNG (CTA Section): Nút btn-primary, btn-lg nổi bật -->
+    <section id="cta" class="container py-5 my-5 text-center">
+        <div class="p-5 bg-primary text-white rounded-4 shadow-lg">
+            <h2 class="display-6 fw-bold mb-3">Sẵn sàng nâng tầm doanh nghiệp của bạn?</h2>
+            <p class="lead mb-4 opacity-90 mx-auto" style="max-width: 650px;">
+                Đăng ký trải nghiệm miễn phí 30 ngày ngay hôm nay. Không yêu cầu thẻ tín dụng!
+            </p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="#" class="btn btn-light btn-lg px-5 py-3 fw-bold text-primary shadow">Đăng Ký Ngay</a>
+                <a href="#" class="btn btn-outline-light btn-lg px-4 py-3">Xem Thêm Tài Liệu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-1">&copy; 2026 NextGenPro. All rights reserved.</p>
+            <small class="text-secondary">[Bài tập] Tạo Landing Page với Bootstrap và Hình Ảnh | CodeGym</small>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3.0 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
