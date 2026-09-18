@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Thực hành] CSS | flex-wrap property</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-header">
+        <h1>[Thực hành] CSS | flex-wrap property</h1>
+        <p class="subtitle">Tìm hiểu thuộc tính kiểm soát việc bọc/xuống dòng của các Flex Items trong CSS Flexbox</p>
+    </div>
+
+    <!-- TÓM TẮT LÝ THUYẾT -->
+    <div class="theory-card">
+        <h2>Lý thuyết tóm tắt</h2>
+        <p>Thuộc tính <code>flex-wrap</code> CSS được sử dụng để chỉ định xem các flex items được cố định trên một dòng hay được bọc thành nhiều dòng khi không gian chứa không đủ.</p>
+        <div class="syntax-box">
+            <code>flex-wrap: nowrap | wrap | wrap-reverse | initial;</code>
+        </div>
+        <ul>
+            <li><strong>nowrap (mặc định):</strong> Các flex items bị ép trên một dòng duy nhất, có thể bị co nhỏ lại hoặc tràn khung chứa.</li>
+            <li><strong>wrap:</strong> Các flex items tự động xuống dòng mới khi vượt quá chiều rộng của khung chứa.</li>
+            <li><strong>wrap-reverse:</strong> Các flex items tự động xuống dòng nhưng thứ tự các dòng được đảo ngược từ dưới lên trên.</li>
+            <li><strong>initial:</strong> Đặt thuộc tính về giá trị mặc định ban đầu (nowrap).</li>
+        </ul>
+    </div>
+
+    <!-- 1. VÍ DỤ NOWRAP -->
+    <section class="demo-section">
+        <div class="section-title">
+            <h3>1. Giá trị <code>flex-wrap: nowrap;</code> (Mặc định)</h3>
+            <span class="badge">Không xuống dòng</span>
+        </div>
+        <p class="desc">Các phần tử giữ nguyên trên 1 dòng duy nhất và tự động co hẹp chiều rộng lại khi container bị thu nhỏ.</p>
+        <div class="code-box"><code>flex-wrap: nowrap;</code></div>
+        <div class="flex-container wrap-nowrap">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+            <div class="flex-item">Item 4</div>
+            <div class="flex-item">Item 5</div>
+            <div class="flex-item">Item 6</div>
+            <div class="flex-item">Item 7</div>
+            <div class="flex-item">Item 8</div>
+        </div>
+    </section>
+
+    <!-- 2. VÍ DỤ WRAP -->
+    <section class="demo-section">
+        <div class="section-title">
+            <h3>2. Giá trị <code>flex-wrap: wrap;</code></h3>
+            <span class="badge badge-success">Xuống dòng thuận</span>
+        </div>
+        <p class="desc">Các phần tử giữ nguyên kích thước quy định; khi hết chiều ngang container sẽ tự động ngắt xuống dòng tiếp theo.</p>
+        <div class="code-box"><code>flex-wrap: wrap;</code></div>
+        <div class="flex-container wrap-wrap">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+            <div class="flex-item">Item 4</div>
+            <div class="flex-item">Item 5</div>
+            <div class="flex-item">Item 6</div>
+            <div class="flex-item">Item 7</div>
+            <div class="flex-item">Item 8</div>
+        </div>
+    </section>
+
+    <!-- 3. VÍ DỤ WRAP-REVERSE -->
+    <section class="demo-section">
+        <div class="section-title">
+            <h3>3. Giá trị <code>flex-wrap: wrap-reverse;</code></h3>
+            <span class="badge badge-warning">Xuống dòng đảo ngược</span>
+        </div>
+        <p class="desc">Các phần tử tự động bọc sang dòng mới, tuy nhiên dòng tiếp theo sẽ được đẩy lên trên (đảo ngược luồng dòng).</p>
+        <div class="code-box"><code>flex-wrap: wrap-reverse;</code></div>
+        <div class="flex-container wrap-reverse">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+            <div class="flex-item">Item 4</div>
+            <div class="flex-item">Item 5</div>
+            <div class="flex-item">Item 6</div>
+            <div class="flex-item">Item 7</div>
+            <div class="flex-item">Item 8</div>
+        </div>
+    </section>
+
+    <!-- 4. VÍ DỤ INITIAL -->
+    <section class="demo-section">
+        <div class="section-title">
+            <h3>4. Giá trị <code>flex-wrap: initial;</code></h3>
+            <span class="badge badge-info">Khởi tạo mặc định</span>
+        </div>
+        <p class="desc">Khôi phục về giá trị mặc định của thuộc tính flex-wrap (tương đương với nowrap).</p>
+        <div class="code-box"><code>flex-wrap: initial;</code></div>
+        <div class="flex-container wrap-initial">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+            <div class="flex-item">Item 4</div>
+            <div class="flex-item">Item 5</div>
+            <div class="flex-item">Item 6</div>
+            <div class="flex-item">Item 7</div>
+            <div class="flex-item">Item 8</div>
+        </div>
+    </section>
+</body>
+</html>

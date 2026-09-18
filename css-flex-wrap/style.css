@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    padding: 30px 20px;
+    line-height: 1.6;
+}
+
+.page-header {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+}
+
+.page-header h1 {
+    color: #0f172a;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #64748b;
+    font-size: 16px;
+}
+
+.subtitle code {
+    background-color: #e2e8f0;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #0284c7;
+}
+
+.theory-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 24px;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #3b82f6;
+}
+
+.theory-card h2 {
+    color: #1d4ed8;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.syntax-box {
+    background-color: #0f172a;
+    color: #38bdf8;
+    padding: 12px 18px;
+    border-radius: 6px;
+    margin: 12px 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+}
+
+.theory-card ul {
+    margin-left: 20px;
+    color: #334155;
+}
+
+.theory-card li {
+    margin-bottom: 6px;
+}
+
+.demo-section {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 24px;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.section-title h3 {
+    color: #0f172a;
+    font-size: 18px;
+}
+
+.badge {
+    background-color: #64748b;
+    color: #fff;
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 12px;
+}
+
+.badge-success {
+    background-color: #16a34a;
+}
+
+.badge-warning {
+    background-color: #d97706;
+}
+
+.badge-info {
+    background-color: #0284c7;
+}
+
+.desc {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.code-box {
+    display: inline-block;
+    background-color: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 13px;
+    color: #2563eb;
+    margin-bottom: 16px;
+}
+
+/* =======================================
+   FLEX CONTAINER & CÁC TRƯỜNG HỢP FLEX-WRAP
+   ======================================= */
+.flex-container {
+    display: flex;
+    background-color: #1e293b;
+    padding: 16px;
+    border-radius: 8px;
+    gap: 12px;
+    min-height: 100px;
+}
+
+.flex-item {
+    background-color: #3b82f6;
+    color: #ffffff;
+    width: 140px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.flex-item:hover {
+    transform: translateY(-2px);
+    background-color: #60a5fa;
+}
+
+/* 1. nowrap */
+.wrap-nowrap {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+/* 2. wrap */
+.wrap-wrap {
+    flex-wrap: wrap;
+}
+
+/* 3. wrap-reverse */
+.wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
+/* 4. initial */
+.wrap-initial {
+    flex-wrap: initial;
+    overflow-x: auto;
+}
