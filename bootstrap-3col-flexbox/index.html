@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Thực hành] Tạo Bố Cục 3 Cột bằng Bootstrap Grid và Flexbox</title>
+    <!-- Nhúng Bootstrap 5.3.0 CSS từ CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .grid-box {
+            min-height: 160px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+        .grid-box:hover {
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <!-- TIÊU ĐỀ TRANG -->
+    <div class="bg-dark text-white py-4 text-center">
+        <div class="container">
+            <h1 class="h3 fw-bold mb-1">[Thực hành] Tạo Bố Cục 3 Cột bằng Bootstrap Grid và Flexbox</h1>
+            <p class="small text-secondary mb-0">Ứng dụng Display Property, Margin & Padding, Flexbox Utilities</p>
+        </div>
+    </div>
+
+    <!-- BƯỚC 1: CẤU TRÚC GRID VỚI 3 CỘT (col-md-4 + Flexbox căn giữa) -->
+    <div class="container mt-5">
+        <div class="row g-4">
+            <div class="col-md-4 d-flex justify-content-center align-items-center bg-white p-3 grid-box text-dark border">
+                <p class="mb-0">Phần 1</p>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center align-items-center bg-secondary p-3 text-white grid-box">
+                <p class="mb-0">Phần 2</p>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center align-items-center bg-white p-3 grid-box text-dark border">
+                <p class="mb-0">Phần 3</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- BƯỚC 2: ÁP DỤNG MARGIN & PADDING ĐỂ ĐIỀU CHỈNH KHOẢNG CÁCH (my-5, py-3) -->
+    <div class="container my-5 py-3 bg-white rounded-3 shadow-sm border">
+        <h3 class="text-center text-primary fw-bold mb-2">Khoảng cách được điều chỉnh bằng Margin & Padding</h3>
+        <p class="text-center text-muted mb-0">Sử dụng class <code>my-5</code> (margin top/bottom) và <code>py-3</code> (padding top/bottom) để tối ưu khoảng cách giữa các phần tử một cách linh hoạt.</p>
+    </div>
+
+    <!-- BƯỚC 3: SỬ DỤNG DISPLAY PROPERTY ĐỂ HIỂN THỊ ẨN HIỆN NỘI DUNG (d-none d-md-block) -->
+    <div class="container mb-5">
+        <!-- Khối chỉ hiển thị trên màn hình lớn hơn 768px (Desktop/Tablet ngang) -->
+        <div class="d-none d-md-block bg-warning text-center p-3 rounded-3 shadow-sm text-dark fw-semibold">
+            <p class="mb-0">📢 Nội dung này chỉ hiển thị trên màn hình lớn hơn 768px (Desktop / Tablet)</p>
+        </div>
+
+        <!-- Khối bổ sung hiển thị trên Mobile để dễ kiểm chứng khi test responsive -->
+        <div class="d-block d-md-none bg-info text-center p-3 rounded-3 shadow-sm text-white fw-semibold mt-2">
+            <p class="mb-0">📱 Bạn đang xem giao diện trên màn hình điện thoại di động (&lt; 768px)</p>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
+        <div class="container">
+            <small class="text-secondary">&copy; 2026 CodeGym. [Thực hành] Bootstrap Grid và Flexbox.</small>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3.0 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
