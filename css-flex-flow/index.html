@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Thực hành] CSS | flex-flow Property</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-header">
+        <h1>[Thực hành] CSS | flex-flow Property</h1>
+        <p class="subtitle">Tìm hiểu thuộc tính viết tắt (shorthand) cho <code>flex-direction</code> và <code>flex-wrap</code></p>
+    </div>
+
+    <!-- TÓM TẮT LÝ THUYẾT -->
+    <div class="theory-card">
+        <h2>Lý thuyết tóm tắt</h2>
+        <p>Thuộc tính <code>flex-flow</code> trong CSS là thuộc tính viết tắt (shorthand) kết hợp giữa hai thuộc tính cơ bản của Flex Container:</p>
+        <ul>
+            <li><strong>flex-direction:</strong> Xác định hướng sắp xếp các item (trục chính - main axis: <code>row</code>, <code>row-reverse</code>, <code>column</code>, <code>column-reverse</code>).</li>
+            <li><strong>flex-wrap:</strong> Xác định các item có được bọc xuống dòng hay không (<code>nowrap</code>, <code>wrap</code>, <code>wrap-reverse</code>).</li>
+        </ul>
+        <div class="syntax-box">
+            <code>flex-flow: &lt;flex-direction&gt; &lt;flex-wrap&gt;;</code>
+        </div>
+        <p><em>Giá trị mặc định:</em> <code>flex-flow: row nowrap;</code></p>
+    </div>
+
+    <!-- VÍ DỤ 1: ROW NOWRAP (MẶC ĐỊNH) -->
+    <section class="demo-section">
+        <div class="section-title">
+            <h3>Ví dụ 1: <code>flex-flow: row nowrap;</code></h3>
+            <span class="badge">Theo hướng đọc văn bản, không xuống dòng</span>
+        </div>
+        <p class="desc">Sắp xếp các phần tử theo hàng ngang từ trái sang phải (giống hướng văn bản LTR) và không bọc xuống dòng.</p>
+        <div class="code-box"><code>flex-flow: row nowrap;</code></div>
+        <div class="flex-container flow-row-nowrap">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+            <div class="flex-item">4</div>
+            <div class="flex-item">5</div>
+            <div class="flex-item">6</div>
+        </div>
+    </section>
+
+    <!-- VÍ DỤ 2: ROW-REVERSE NOWRAP -->
+    <section class="demo-section">
+        <div class="section-title">
+            <h3>Ví dụ 2: <code>flex-flow: row-reverse nowrap;</code></h3>
+            <span class="badge badge-warning">Ngược hướng văn bản, không xuống dòng</span>
+        </div>
+        <p class="desc">Sắp xếp các phần tử theo hàng ngang nhưng theo thứ tự đảo ngược (từ phải sang trái), không bọc xuống dòng.</p>
+        <div class="code-box"><code>flex-flow: row-reverse nowrap;</code></div>
+        <div class="flex-container flow-row-reverse-nowrap">
+            <div class="flex-item">1</div>
+            <div class="flex-item">2</div>
+            <div class="flex-item">3</div>
+            <div class="flex-item">4</div>
+            <div class="flex-item">5</div>
+            <div class="flex-item">6</div>
+        </div>
+    </section>
+
+    <!-- VÍ DỤ 3: ROW WRAP (XUỐNG DÒNG THUẬN) -->
+    <section class="demo-section">
+        <div class="section-title">
+            <h3>Ví dụ 3: <code>flex-flow: row wrap;</code></h3>
+            <span class="badge badge-success">Hàng ngang + tự động xuống dòng</span>
+        </div>
+        <p class="desc">Các phần tử sắp xếp theo hàng ngang và tự động xuống dòng mới khi container không đủ không gian chứa.</p>
+        <div class="code-box"><code>flex-flow: row wrap;</code></div>
+        <div class="flex-container flow-row-wrap">
+            <div class="flex-item card">Mục 1</div>
+            <div class="flex-item card">Mục 2</div>
+            <div class="flex-item card">Mục 3</div>
+            <div class="flex-item card">Mục 4</div>
+            <div class="flex-item card">Mục 5</div>
+            <div class="flex-item card">Mục 6</div>
+        </div>
+    </section>
+
+    <!-- VÍ DỤ 4: COLUMN WRAP (THEO CỘT DỌC) -->
+    <section class="demo-section">
+        <div class="section-title">
+            <h3>Ví dụ 4: <code>flex-flow: column wrap;</code></h3>
+            <span class="badge badge-info">Theo cột dọc + bọc sang cột mới</span>
+        </div>
+        <p class="desc">Các phần tử xếp theo cột dọc từ trên xuống dưới, khi chạm giới hạn chiều cao sẽ chuyển sang cột mới.</p>
+        <div class="code-box"><code>flex-flow: column wrap; height: 180px;</code></div>
+        <div class="flex-container flow-column-wrap">
+            <div class="flex-item">A</div>
+            <div class="flex-item">B</div>
+            <div class="flex-item">C</div>
+            <div class="flex-item">D</div>
+            <div class="flex-item">E</div>
+            <div class="flex-item">F</div>
+        </div>
+    </section>
+</body>
+</html>
