@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Navbar - [Thực hành] CodeGym</title>
+    <!-- Bước 1: Nhúng Bootstrap 5.3.0 CSS từ CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .hero-section {
+            padding: 60px 0;
+            background: #ffffff;
+            border-bottom: 1px solid #dee2e6;
+            margin-bottom: 40px;
+        }
+        .code-box {
+            background: #212529;
+            color: #0dcaf0;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- BƯỚC 2: NAVBAR HOÀN CHỈNH VỚI BOOTSTRAP -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container-fluid">
+            <!-- Brand -->
+            <a class="navbar-brand fw-bold" href="#">
+                <span class="text-primary">&lt;My</span>Website<span class="text-primary">/&gt;</span>
+            </a>
+            
+            <!-- Toggler Button for Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <!-- Dropdown Menu -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#web-design">Web Design</a></li>
+                            <li><a class="dropdown-item" href="#seo">SEO</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#hosting">Cloud Hosting</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- Search form bổ sung thêm tính chuyên nghiệp -->
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2 form-control-sm" type="search" placeholder="Tìm kiếm..." aria-label="Search">
+                    <button class="btn btn-outline-primary btn-sm" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PHẦN NỘI DUNG MINH HỌA TRANG WEB -->
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-5 fw-bold text-dark">[Thực hành] Tạo Navbar với Bootstrap</h1>
+            <p class="lead text-muted">Thực hành thanh điều hướng Responsive chuyên nghiệp sử dụng Bootstrap 5.3.0 CDN</p>
+            <a href="#demo-info" class="btn btn-primary px-4 me-2">Xem tài liệu</a>
+            <a href="https://getbootstrap.com" target="_blank" class="btn btn-outline-secondary px-4">Bootstrap Docs</a>
+        </div>
+    </header>
+
+    <main class="container my-5" id="demo-info">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                        <h3 class="card-title h5 text-primary">📌 Các class Bootstrap đã sử dụng</h3>
+                        <ul class="list-group list-group-flush mt-3">
+                            <li class="list-group-item"><code>navbar navbar-expand-lg</code>: Hiển thị full trên desktop (&gt;=992px), thu gọn thành burger menu trên mobile.</li>
+                            <li class="list-group-item"><code>navbar-dark bg-dark</code>: Giao diện nền tối với màu chữ tương phản.</li>
+                            <li class="list-group-item"><code>navbar-brand</code>: Logo hoặc tên trang web.</li>
+                            <li class="list-group-item"><code>navbar-toggler</code> & <code>navbar-toggler-icon</code>: Nút bấm mở menu trên điện thoại.</li>
+                            <li class="list-group-item"><code>dropdown-toggle</code> & <code>dropdown-menu</code>: Menu con dạng thả xuống.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                        <h3 class="card-title h5 text-success">🚀 Kiểm tra tính năng</h3>
+                        <p class="text-muted">Thanh điều hướng hoàn toàn sẵn sàng và hỗ trợ các tính năng:</p>
+                        <div class="code-box mb-3">
+                            &lt;!-- Bootstrap 5.3.0 JS Bundle --&gt;<br>
+                            &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+                        </div>
+                        <p class="small text-secondary mb-0">Thử bấm vào mục <strong>Services</strong> để mở Dropdown hoặc thu nhỏ cửa sổ trình duyệt xuống dưới 992px để xem nút Hamburger hoạt động mượt mà.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0 text-muted">&copy; 2026 CodeGym. [Thực hành] Tạo Navbar với Bootstrap 5.</p>
+        </div>
+    </footer>
+
+    <!-- Bước 1: Nhúng Bootstrap 5.3.0 JS Bundle trước thẻ đóng body -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
