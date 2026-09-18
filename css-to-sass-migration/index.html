@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Thực hành] Chuyển đổi CSS có sẵn sang SASS theo chuẩn</title>
+    <!-- Nhúng file CSS được biên dịch trực tiếp từ kiến trúc SASS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h2>Chuyển Đổi CSS Sang SASS Chuẩn Thành Công!</h2>
+            <p>File CSS ban đầu đã được bẻ tách cấu trúc thành các biến, mixins, components và layout logic theo chuẩn 7-1 SASS Pattern:</p>
+            <ul>
+                <li><strong>_variables.scss:</strong> <code>$primary-color: blue;</code>, <code>$box-shadow</code>, v.v.</li>
+                <li><strong>_mixins.scss:</strong> <code>@mixin button-style($bg-color)</code> và <code>@mixin box-shadow</code></li>
+                <li><strong>_global.scss:</strong> Thiết lập font-family, text-color và background-color</li>
+                <li><strong>_container.scss:</strong> Layout <code>width: 80%; margin: 0 auto;</code></li>
+                <li><strong>_buttons.scss:</strong> Tái sử dụng mixin <code>@include button-style($primary-color)</code></li>
+                <li><strong>_cards.scss:</strong> Border, padding và <code>@include box-shadow</code></li>
+            </ul>
+            <div style="margin-top: 20px;">
+                <button class="button">Nút bấm CSS từ SASS</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

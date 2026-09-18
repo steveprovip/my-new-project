@@ -1,0 +1,14 @@
+// components/_cards.scss
+.card {
+  background: #ffffff;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  padding: 20px;
+  @include box-shadow;
+  margin-bottom: 20px;
+
+  h2 {
+    margin-top: 0;
+    color: $primary-color;
+  }
+}
