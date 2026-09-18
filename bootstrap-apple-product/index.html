@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone - Apple Style Product Page - [Bài tập] CodeGym</title>
+    <!-- Nhúng Bootstrap 5.3.0 CSS từ CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Font Awesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #000000;
+            color: #f5f5f7;
+            overflow-x: hidden;
+        }
+        .apple-nav {
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .text-titanium {
+            background: linear-gradient(180deg, #ffd700, #bfa15f, #7f6e40);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-iphone-img {
+            max-height: 480px;
+            object-fit: contain;
+            filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.7));
+            transition: transform 0.4s ease;
+        }
+        .hero-iphone-img:hover {
+            transform: scale(1.03);
+        }
+        .spec-box {
+            background-color: #161617;
+            border-radius: 18px;
+            border: 1px solid #2d2d2f;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .spec-box:hover {
+            transform: translateY(-5px);
+            border-color: #0071e3;
+        }
+        .btn-apple-buy {
+            background-color: #0071e3;
+            color: #ffffff;
+            border-radius: 980px;
+            padding: 10px 24px;
+            font-weight: 500;
+        }
+        .btn-apple-buy:hover {
+            background-color: #0077ed;
+            color: #ffffff;
+        }
+        .btn-apple-link {
+            color: #2997ff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .btn-apple-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. APPLE GLOBAL NAVIGATION BAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark apple-nav sticky-top py-2 border-bottom border-dark">
+        <div class="container">
+            <a class="navbar-brand text-white fs-5" href="#"><i class="fa-brands fa-apple"></i></a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#appleNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="appleNav">
+                <ul class="navbar-nav mx-auto small text-center gap-lg-4">
+                    <li class="nav-item"><a class="nav-link text-white-50" href="#">Store</a></li>
+                    <li class="nav-item"><a class="nav-link text-white-50" href="#">Mac</a></li>
+                    <li class="nav-item"><a class="nav-link text-white-50" href="#">iPad</a></li>
+                    <li class="nav-item"><a class="nav-link active text-white" href="#iphone">iPhone</a></li>
+                    <li class="nav-item"><a class="nav-link text-white-50" href="#">Watch</a></li>
+                    <li class="nav-item"><a class="nav-link text-white-50" href="#">AirPods</a></li>
+                    <li class="nav-item"><a class="nav-link text-white-50" href="#">Entertainment</a></li>
+                    <li class="nav-item"><a class="nav-link text-white-50" href="#">Support</a></li>
+                </ul>
+                <div class="d-flex justify-content-center gap-4 text-white-50 small mt-3 mt-lg-0">
+                    <a href="#" class="text-white-50 text-decoration-none"><i class="fas fa-search"></i></a>
+                    <a href="#" class="text-white-50 text-decoration-none"><i class="fas fa-bag-shopping"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. SUB-NAVBAR CHUYÊN BIỆT CHO DÒNG IPHONE -->
+    <section class="bg-black py-3 border-bottom border-dark">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center">
+            <h2 class="h5 fw-bold mb-0 text-white">iPhone 16 Pro</h2>
+            <div class="d-flex align-items-center gap-4 small mt-2 mt-sm-0">
+                <span class="text-white-50 d-none d-md-inline">From $999 or $41.62/mo. for 24 mo.</span>
+                <a href="#buy" class="btn btn-apple-buy btn-sm">Buy</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. HERO SECTION - TITANIUM HIGHLIGHT (Flexbox & Margin/Padding) -->
+    <header class="py-5 text-center" id="iphone">
+        <div class="container py-4">
+            <span class="text-secondary fw-semibold small text-uppercase tracking-wider">iPhone 16 Pro</span>
+            <h1 class="display-3 fw-bold my-3 text-titanium">Titanium. So strong. So light. So Pro.</h1>
+            <p class="lead text-white-50 mb-4 mx-auto" style="max-width: 700px;">
+                Forged in titanium and featuring the groundbreaking A18 Pro chip, customizable Camera Control, and an enormous leap in battery life.
+            </p>
+            <div class="d-flex justify-content-center align-items-center gap-4 mb-5 flex-wrap">
+                <a href="#buy" class="btn btn-apple-buy">Buy Now</a>
+                <a href="#specs" class="btn-apple-link">Learn more about Titanium <i class="fas fa-chevron-right ms-1 small"></i></a>
+            </div>
+            
+            <div class="mt-4">
+                <img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&w=1200&q=80" 
+                     alt="iPhone 16 Pro Max" 
+                     class="img-fluid hero-iphone-img rounded-4">
+            </div>
+        </div>
+    </header>
+
+    <!-- 4. KEY SPECIFICATIONS GRID (Bootstrap Grid + Flexbox + Font Awesome) -->
+    <section class="py-5" id="specs">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-white mb-2">Get the highlights.</h2>
+                <p class="text-secondary">Engineered to elevate everything you do every day.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Spec 1: Camera Control -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="spec-box p-4 h-100 d-flex flex-column justify-content-between text-center">
+                        <div class="mb-4">
+                            <i class="fas fa-camera text-primary fs-1 mb-3"></i>
+                            <h3 class="h5 fw-bold text-white mb-2">Camera Control</h3>
+                            <p class="small text-white-50 mb-0">Total creative control at your fingertips. Slide to zoom, expose, or adjust depth of field instantly.</p>
+                        </div>
+                        <div class="text-primary fw-semibold small">48MP Fusion Camera</div>
+                    </div>
+                </div>
+
+                <!-- Spec 2: A18 Pro Chip -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="spec-box p-4 h-100 d-flex flex-column justify-content-between text-center">
+                        <div class="mb-4">
+                            <i class="fas fa-microchip text-warning fs-1 mb-3"></i>
+                            <h3 class="h5 fw-bold text-white mb-2">A18 Pro Chip</h3>
+                            <p class="small text-white-50 mb-0">Unprecedented power with 16-core Neural Engine and hardware-accelerated ray tracing for console games.</p>
+                        </div>
+                        <div class="text-warning fw-semibold small">Apple Intelligence Ready</div>
+                    </div>
+                </div>
+
+                <!-- Spec 3: Battery Life -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="spec-box p-4 h-100 d-flex flex-column justify-content-between text-center">
+                        <div class="mb-4">
+                            <i class="fas fa-battery-full text-success fs-1 mb-3"></i>
+                            <h3 class="h5 fw-bold text-white mb-2">Huge Battery Leap</h3>
+                            <p class="small text-white-50 mb-0">Up to 33 hours video playback. An optimized internal design fits larger batteries for all-day stamina.</p>
+                        </div>
+                        <div class="text-success fw-semibold small">Up to 33 hrs playback</div>
+                    </div>
+                </div>
+
+                <!-- Spec 4: Ceramic Shield & Titanium -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="spec-box p-4 h-100 d-flex flex-column justify-content-between text-center">
+                        <div class="mb-4">
+                            <i class="fas fa-shield-halved text-info fs-1 mb-3"></i>
+                            <h3 class="h5 fw-bold text-white mb-2">Grade 5 Titanium</h3>
+                            <p class="small text-white-50 mb-0">Remarkably durable and lightest Pro models ever, protected by the latest-generation Ceramic Shield.</p>
+                        </div>
+                        <div class="text-info fw-semibold small">2x tougher than glass</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. WHICH IPHONE IS RIGHT FOR YOU? (Comparison Grid) -->
+    <section class="py-5 bg-black" id="compare">
+        <div class="container py-4">
+            <h2 class="display-6 fw-bold text-center text-white mb-5">Compare iPhone models.</h2>
+            
+            <div class="row g-4 text-center justify-content-center">
+                <!-- Model 1 -->
+                <div class="col-12 col-md-4">
+                    <div class="p-4 bg-dark rounded-4 h-100 d-flex flex-column align-items-center justify-content-between border border-secondary">
+                        <div>
+                            <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?auto=format&fit=crop&w=400&q=80" alt="iPhone 16 Pro" class="img-fluid mb-3 rounded-3" style="height: 180px; object-fit: contain;">
+                            <h3 class="h4 fw-bold text-white mb-1">iPhone 16 Pro</h3>
+                            <p class="text-secondary small mb-3">The ultimate iPhone.</p>
+                            <div class="fs-5 fw-bold text-white mb-3">From $999</div>
+                        </div>
+                        <div class="w-100">
+                            <hr class="border-secondary my-3">
+                            <p class="small text-white-50 mb-2"><i class="fas fa-mobile-screen me-2 text-primary"></i>6.3" or 6.9" Super Retina XDR</p>
+                            <p class="small text-white-50 mb-2"><i class="fas fa-microchip me-2 text-warning"></i>A18 Pro chip</p>
+                            <p class="small text-white-50 mb-4"><i class="fas fa-camera me-2 text-info"></i>48MP Fusion | 5x Telephoto</p>
+                            <a href="#buy" class="btn btn-apple-buy w-100">Buy</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Model 2 -->
+                <div class="col-12 col-md-4">
+                    <div class="p-4 bg-dark rounded-4 h-100 d-flex flex-column align-items-center justify-content-between border border-secondary">
+                        <div>
+                            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=400&q=80" alt="iPhone 16" class="img-fluid mb-3 rounded-3" style="height: 180px; object-fit: contain;">
+                            <h3 class="h4 fw-bold text-white mb-1">iPhone 16</h3>
+                            <p class="text-secondary small mb-3">Powerful. Colorful. Capable.</p>
+                            <div class="fs-5 fw-bold text-white mb-3">From $799</div>
+                        </div>
+                        <div class="w-100">
+                            <hr class="border-secondary my-3">
+                            <p class="small text-white-50 mb-2"><i class="fas fa-mobile-screen me-2 text-primary"></i>6.1" or 6.7" Super Retina XDR</p>
+                            <p class="small text-white-50 mb-2"><i class="fas fa-microchip me-2 text-warning"></i>A18 chip</p>
+                            <p class="small text-white-50 mb-4"><i class="fas fa-camera me-2 text-info"></i>48MP Fusion | 2x Telephoto</p>
+                            <a href="#buy" class="btn btn-apple-buy w-100">Buy</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Model 3 -->
+                <div class="col-12 col-md-4">
+                    <div class="p-4 bg-dark rounded-4 h-100 d-flex flex-column align-items-center justify-content-between border border-secondary">
+                        <div>
+                            <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&w=400&q=80" alt="iPhone 15" class="img-fluid mb-3 rounded-3" style="height: 180px; object-fit: contain;">
+                            <h3 class="h4 fw-bold text-white mb-1">iPhone 15</h3>
+                            <p class="text-secondary small mb-3">As amazing as ever.</p>
+                            <div class="fs-5 fw-bold text-white mb-3">From $699</div>
+                        </div>
+                        <div class="w-100">
+                            <hr class="border-secondary my-3">
+                            <p class="small text-white-50 mb-2"><i class="fas fa-mobile-screen me-2 text-primary"></i>6.1" or 6.7" Super Retina XDR</p>
+                            <p class="small text-white-50 mb-2"><i class="fas fa-microchip me-2 text-warning"></i>A16 Bionic chip</p>
+                            <p class="small text-white-50 mb-4"><i class="fas fa-camera me-2 text-info"></i>48MP Main | 2x Telephoto</p>
+                            <a href="#buy" class="btn btn-apple-buy w-100">Buy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. TRADE-IN / BUY CTA SECTION -->
+    <section class="container py-5 my-4" id="buy">
+        <div class="p-5 rounded-4 text-center bg-dark border border-secondary">
+            <i class="fas fa-arrow-right-arrow-left text-primary fs-1 mb-3"></i>
+            <h2 class="display-6 fw-bold text-white mb-2">Trade in your current smartphone.</h2>
+            <p class="text-white-50 lead fs-6 mb-4 mx-auto" style="max-width: 600px;">
+                Get $180–$650 in credit when you trade in iPhone 11 or higher. Upgrade to iPhone 16 Pro today with flexible carrier deals.
+            </p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <button class="btn btn-apple-buy px-4 py-2">Get your trade-in estimate</button>
+                <a href="#" class="btn btn-outline-light px-4 py-2 rounded-pill">Find your carrier deal</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FOOTER CHUẨN APPLE STYLE -->
+    <footer class="py-5 bg-black border-top border-dark text-secondary small">
+        <div class="container">
+            <p class="mb-3 text-muted">
+                * Apple Intelligence is available in beta on all iPhone 16 models, iPhone 15 Pro, and iPhone 15 Pro Max with Siri and device language set to U.S. English.
+            </p>
+            <hr class="border-dark my-4">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+                <p class="mb-0">&copy; 2026 Apple Inc. All rights reserved.</p>
+                <div class="d-flex gap-3 flex-wrap">
+                    <a href="#" class="text-secondary text-decoration-none">Privacy Policy</a>
+                    <a href="#" class="text-secondary text-decoration-none">Terms of Use</a>
+                    <a href="#" class="text-secondary text-decoration-none">Sales and Refunds</a>
+                    <a href="#" class="text-secondary text-decoration-none">Legal</a>
+                </div>
+                <div class="text-muted">[Bài tập] Thiết kế Trang Giới Thiệu Sản Phẩm (Apple iPhone) | CodeGym</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3.0 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
