@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    padding: 30px 20px;
+    line-height: 1.6;
+}
+
+.page-header {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+}
+
+.page-header h1 {
+    color: #0f172a;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #64748b;
+    font-size: 16px;
+}
+
+.subtitle code {
+    background-color: #e2e8f0;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #0284c7;
+}
+
+.theory-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 24px;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #10b981;
+}
+
+.theory-card h2 {
+    color: #047857;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.syntax-box {
+    background-color: #0f172a;
+    color: #34d399;
+    padding: 12px 18px;
+    border-radius: 6px;
+    margin: 12px 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+}
+
+.theory-card ul {
+    margin-left: 20px;
+    color: #334155;
+}
+
+.theory-card li {
+    margin-bottom: 6px;
+}
+
+.demo-section {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 24px;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.section-title h3 {
+    color: #0f172a;
+    font-size: 18px;
+}
+
+.badge {
+    background-color: #10b981;
+    color: #fff;
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 12px;
+}
+
+.badge-primary {
+    background-color: #3b82f6;
+}
+
+.desc {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.code-box {
+    display: inline-block;
+    background-color: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 13px;
+    color: #059669;
+    margin-bottom: 16px;
+}
+
+/* =======================================
+   FLEX CONTAINER & VÍ DỤ 1 (5 DIVS)
+   ======================================= */
+.flex-container {
+    display: flex;
+    background-color: #0f172a;
+    padding: 16px;
+    border-radius: 8px;
+    gap: 12px;
+}
+
+.flex-item {
+    background-color: #64748b;
+    color: #ffffff;
+    padding: 22px 16px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    min-width: 80px;
+    transition: all 0.3s ease;
+}
+
+/* Div 1, 3, 4, 5 mặc định không mở rộng */
+.example-1 .flex-item {
+    flex-grow: 0;
+}
+
+/* Div 2 được thiết lập flex-grow để phát triển chiếm phần không gian trống */
+.example-1 .item-2 {
+    flex-grow: 3;
+    background-color: #10b981;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* =======================================
+   VÍ DỤ 2 (TỶ LỆ PHÁT TRIỂN 1 : 2 : 1)
+   ======================================= */
+.example-2 .ratio-1 {
+    flex-grow: 1;
+    background-color: #3b82f6;
+}
+
+.example-2 .ratio-2 {
+    flex-grow: 2;
+    background-color: #2563eb;
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
+}
+
+.example-2 .ratio-3 {
+    flex-grow: 1;
+    background-color: #3b82f6;
+}
+
+@media (max-width: 600px) {
+    .flex-container {
+        flex-direction: column;
+    }
+}
