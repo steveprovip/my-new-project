@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Thiết kế Trang Web với Bootstrap Grid System</title>
+    <!-- Nhúng Bootstrap 5.3.0 CSS từ CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8fafc;
+            color: #334155;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .header-top {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: #ffffff;
+            padding: 24px 0;
+            border-bottom: 3px solid #3b82f6;
+        }
+        .main-wrapper {
+            flex: 1;
+        }
+        .content-card {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 28px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+        .sidebar-card {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 24px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+        .article-img-placeholder {
+            background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+            height: 220px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. HEADER: Chứa tiêu đề trang web -->
+    <header class="header-top text-center">
+        <div class="container">
+            <h1 class="display-6 fw-bold mb-1">Cổng Thông Tin Công Nghệ</h1>
+            <p class="lead mb-0 fs-6 text-light opacity-75">[Bài tập] Thiết kế Trang Web với Bootstrap Grid System - CodeGym</p>
+        </div>
+    </header>
+
+    <!-- 2. NAVBAR: Menu điều hướng với Bootstrap Navbar có Dropdown -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">
+                <span class="text-white">Tech</span>Grid<span class="text-primary">.io</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarGridMenu" aria-controls="navbarGridMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarGridMenu">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tin tức</a>
+                    </li>
+                    <!-- Dropdown Menu -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Khóa học
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">HTML5 & CSS3</a></li>
+                            <li><a class="dropdown-item" href="#">Bootstrap 5 Pro</a></li>
+                            <li><a class="dropdown-item" href="#">JavaScript ES6+</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Fullstack Web</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Về chúng tôi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Liên hệ</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2 form-control-sm" type="search" placeholder="Tìm kiếm bài viết..." aria-label="Search">
+                    <button class="btn btn-outline-primary btn-sm" type="submit">Tìm</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 3 & 4. MAIN WRAPPER VỚI BOOTSTRAP GRID SYSTEM:
+         - Desktop (>=992px / lg): Main Content col-lg-8 (hoặc col-md-8), Sidebar col-lg-4 (hoặc col-md-4)
+         - Mobile (<992px): Sidebar nằm dưới Main Content (col-12)
+    -->
+    <div class="main-wrapper py-4">
+        <div class="container">
+            <div class="row g-4">
+                <!-- 3. MAIN CONTENT: 2 cột trên desktop (col-lg-8 / col-md-8), 1 cột trên mobile (col-12) -->
+                <main class="col-12 col-md-8 col-lg-8">
+                    <article class="content-card mb-4">
+                        <div class="article-img-placeholder">
+                            <span class="fs-4">🖼️ Ảnh bìa bài viết công nghệ</span>
+                        </div>
+                        <span class="badge bg-primary mb-2">Bootstrap 5 Grid</span>
+                        <h2 class="fw-bold mb-3">Tối Ưu Giao Diện Web Đa Màn Hình Với Bootstrap Grid System</h2>
+                        <div class="text-muted small mb-3 pb-2 border-bottom">
+                            Đăng bởi <strong>Ban Biên Tập</strong> | Ngày 18/09/2026 | Lượt xem: 2,450
+                        </div>
+                        <p class="lead fs-6 text-secondary">
+                            Bootstrap Grid System là hệ thống lưới 12 cột linh hoạt sử dụng cơ chế Flexbox của CSS, cho phép lập trình viên tạo nên những trang web chuẩn Responsive chỉ bằng các class đơn giản.
+                        </p>
+                        <p>
+                            Với việc kết hợp các breakpoint tiêu chuẩn như <code>col-12</code> (chiếm toàn bộ màn hình nhỏ) và <code>col-md-8</code> / <code>col-lg-8</code> (chiếm 8/12 cột tương đương 66.6% màn hình máy tính), giao diện sẽ tự động thích ứng mượt mà khi người dùng thay đổi kích thước cửa sổ trình duyệt.
+                        </p>
+
+                        <div class="row g-3 mt-2">
+                            <div class="col-12 col-sm-6">
+                                <div class="p-3 bg-light rounded-3 border">
+                                    <h4 class="h6 fw-bold text-primary">✓ Breakpoint Desktop (≥992px)</h4>
+                                    <p class="small text-muted mb-0">Hiển thị song song 2 cột: Cột nội dung chính 8 phần, Sidebar phụ 4 phần.</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="p-3 bg-light rounded-3 border">
+                                    <h4 class="h6 fw-bold text-success">✓ Breakpoint Mobile (&lt;992px)</h4>
+                                    <p class="small text-muted mb-0">Sidebar tự động xếp xuống phía dưới của nội dung chính (1 cột 100%).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Bài viết phụ -->
+                    <div class="content-card">
+                        <h3 class="h5 fw-bold mb-3">Bài viết mới cập nhật</h3>
+                        <div class="list-group list-group-flush">
+                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-1 fw-bold">Cách nhúng Bootstrap 5 CDN tối ưu tốc độ</h6>
+                                    <small class="text-muted">Chia sẻ mẹo tăng tốc website với Preconnect & CDN</small>
+                                </div>
+                                <span class="badge bg-secondary rounded-pill">Mới</span>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-1 fw-bold">So sánh Flexbox thuần và Bootstrap Grid</h6>
+                                    <small class="text-muted">Khi nào nên viết CSS thuần, khi nào dùng thư viện</small>
+                                </div>
+                                <span class="badge bg-secondary rounded-pill">Hot</span>
+                            </a>
+                        </div>
+                    </div>
+                </main>
+
+                <!-- 4. SIDEBAR: Thông tin phụ (col-lg-4 / col-md-4 trên desktop, col-12 nằm dưới trên mobile) -->
+                <aside class="col-12 col-md-4 col-lg-4">
+                    <!-- Widget 1: Chuyên mục -->
+                    <div class="sidebar-card mb-4">
+                        <h4 class="h5 fw-bold text-dark mb-3 pb-2 border-bottom">Chuyên mục tin</h4>
+                        <ul class="list-unstyled mb-0">
+                            <li class="py-2 border-bottom d-flex justify-content-between align-items-center">
+                                <a href="#" class="text-decoration-none text-secondary">Bootstrap 5 Guide</a>
+                                <span class="badge bg-primary-subtle text-primary">15</span>
+                            </li>
+                            <li class="py-2 border-bottom d-flex justify-content-between align-items-center">
+                                <a href="#" class="text-decoration-none text-secondary">CSS Grid & Flexbox</a>
+                                <span class="badge bg-primary-subtle text-primary">28</span>
+                            </li>
+                            <li class="py-2 border-bottom d-flex justify-content-between align-items-center">
+                                <a href="#" class="text-decoration-none text-secondary">Giao diện UI/UX</a>
+                                <span class="badge bg-primary-subtle text-primary">12</span>
+                            </li>
+                            <li class="py-2 d-flex justify-content-between align-items-center">
+                                <a href="#" class="text-decoration-none text-secondary">Tips & Thủ thuật Frontend</a>
+                                <span class="badge bg-primary-subtle text-primary">09</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Widget 2: Quảng cáo / Đăng ký nhận tin -->
+                    <div class="sidebar-card bg-primary text-white border-0">
+                        <h4 class="h5 fw-bold mb-2">Đăng ký nhận tài liệu</h4>
+                        <p class="small opacity-90 mb-3">Nhận trọn bộ cheatsheet Bootstrap 5 Grid System & các dự án mẫu miễn phí qua Email.</p>
+                        <form>
+                            <div class="mb-2">
+                                <input type="email" class="form-control form-control-sm" placeholder="Nhập địa chỉ email...">
+                            </div>
+                            <button class="btn btn-light btn-sm w-100 fw-bold text-primary" type="button">Đăng Ký Ngay</button>
+                        </form>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. FOOTER: Chứa thông tin bản quyền -->
+    <footer class="bg-dark text-white text-center py-4 mt-auto">
+        <div class="container">
+            <p class="mb-1">&copy; 2026 TechGrid.io. All rights reserved.</p>
+            <small class="text-secondary">[Bài tập] Thiết kế Trang Web với Bootstrap Grid System | CodeGym</small>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3.0 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
