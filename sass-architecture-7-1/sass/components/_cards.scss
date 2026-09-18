@@ -1,0 +1,12 @@
+// components/_cards.scss
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: $spacing-md;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}

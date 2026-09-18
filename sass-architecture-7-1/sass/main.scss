@@ -1,0 +1,35 @@
+// ==========================================
+// 4️⃣ TÍCH HỢP TẤT CẢ VÀO MAIN.SCSS (7-1 Pattern)
+// ==========================================
+
+// 1. abstracts
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+
+// 2. base
+@import "base/reset";
+@import "base/typography";
+@import "base/global";
+
+// 3. layout
+@import "layout/header";
+@import "layout/footer";
+@import "layout/grid";
+
+// 4. components
+@import "components/buttons";
+@import "components/cards";
+
+// 5. pages
+@import "pages/home";
+@import "pages/about";
+@import "pages/contact";
+
+// 6. themes
+@import "themes/light";
+@import "themes/dark";
+
+// 7. vendors
+@import "vendors/bootstrap";
+@import "vendors/custom";

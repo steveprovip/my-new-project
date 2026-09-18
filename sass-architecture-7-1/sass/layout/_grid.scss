@@ -1,0 +1,10 @@
+// layout/_grid.scss
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $spacing-md;
+
+  @include responsive(mobile) {
+    grid-template-columns: 1fr;
+  }
+}

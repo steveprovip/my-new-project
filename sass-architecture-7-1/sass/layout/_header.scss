@@ -1,0 +1,11 @@
+// layout/_header.scss
+.header {
+  background: $dark-color;
+  color: white;
+  padding: $spacing-md;
+  text-align: center;
+
+  h1 {
+    color: $primary-color;
+  }
+}

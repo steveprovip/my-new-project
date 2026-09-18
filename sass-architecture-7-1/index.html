@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiến Trúc Thư Mục SASS 7-1 Chuẩn - CodeGym</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            padding: 30px 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e2e8f0;
+        }
+        h1 {
+            color: #c678dd;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+        }
+        .tree-view {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Consolas', 'Courier New', Courier, monospace;
+            font-size: 15px;
+            line-height: 1.5;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+        .folder { color: #dcdcaa; font-weight: bold; }
+        .file { color: #9cdcfe; }
+        .comment { color: #6a9955; font-style: italic; }
+        .card-summary {
+            background: #f1f5f9;
+            border-left: 4px solid #c678dd;
+            padding: 16px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>[Bài đọc] Cách tổ chức thư mục và file SASS hiệu quả</h1>
+        <p class="lead">Mô hình kiến trúc <strong>7-1 SASS Pattern</strong> chuẩn quốc tế giúp tối ưu hóa khả năng bảo trì, mở rộng và tái sử dụng code trong các dự án Frontend chuyên nghiệp.</p>
+        
+        <h2>Cấu trúc cây thư mục 7-1 SASS đã khởi tạo</h2>
+        <div class="tree-view">
+📂 <span class="folder">sass/</span>
+│── 📄 <span class="file">main.scss</span>         <span class="comment"># File SASS chính (import tất cả 7 folder bên dưới)</span>
+│── 📂 <span class="folder">abstracts/</span>        <span class="comment"># Chứa biến, mixins, functions</span>
+│   │── 📄 _variables.scss  <span class="comment"># Colors, fonts, spacing</span>
+│   │── 📄 _mixins.scss     <span class="comment"># Nhóm CSS tái sử dụng (flex, responsive)</span>
+│   │── 📄 _functions.scss  <span class="comment"># Các hàm xử lý (rem, px)</span>
+│── 📂 <span class="folder">base/</span>             <span class="comment"># Thiết lập nền tảng dự án</span>
+│   │── 📄 _reset.scss      <span class="comment"># Reset CSS</span>
+│   │── 📄 _typography.scss <span class="comment"># Font chữ, tiêu đề</span>
+│   │── 📄 _global.scss     <span class="comment"># Quy tắc chung</span>
+│── 📂 <span class="folder">layout/</span>           <span class="comment"># Bố cục tổng thể trang web</span>
+│   │── 📄 _header.scss     <span class="comment"># Header</span>
+│   │── 📄 _footer.scss     <span class="comment"># Footer</span>
+│   │── 📄 _grid.scss       <span class="comment"># Hệ thống lưới</span>
+│── 📂 <span class="folder">components/</span>       <span class="comment"># Các thành phần UI độc lập</span>
+│   │── 📄 _buttons.scss    <span class="comment"># Button styles & modifier</span>
+│   │── 📄 _cards.scss      <span class="comment"># Card UI</span>
+│── 📂 <span class="folder">pages/</span>            <span class="comment"># Style riêng biệt cho từng trang</span>
+│   │── 📄 _home.scss       <span class="comment"># Trang chủ</span>
+│   │── 📄 _about.scss      <span class="comment"># Giới thiệu</span>
+│   │── 📄 _contact.scss    <span class="comment"># Liên hệ</span>
+│── 📂 <span class="folder">themes/</span>           <span class="comment"># Chế độ màu sắc</span>
+│   │── 📄 _light.scss      <span class="comment"># Giao diện sáng</span>
+│   │── 📄 _dark.scss       <span class="comment"># Giao diện tối</span>
+│── 📂 <span class="folder">vendors/</span>          <span class="comment"># Thư viện bên ngoài</span>
+│   │── 📄 _bootstrap.scss  <span class="comment"># Biến tùy biến Bootstrap</span>
+│   │── 📄 _custom.scss     <span class="comment"># Ghi đè vendor CSS</span>
+        </div>
+
+        <div class="card-summary">
+            <h3>✅ Tóm tắt giá trị đạt được:</h3>
+            <ul>
+                <li><strong>Quản lý logic rõ ràng:</strong> Mỗi file đảm nhận đúng 1 nhiệm vụ duy nhất (Single Responsibility Principle).</li>
+                <li><strong>Dễ dàng scale:</strong> Thêm trang mới chỉ cần tạo thêm file vào thư mục <code>pages/</code>, thêm component vào <code>components/</code>.</li>
+                <li><strong>Dễ dàng biên dịch:</strong> Chỉ cần biên dịch duy nhất file <code>main.scss</code> ra file <code>style.css</code> thành phẩm.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

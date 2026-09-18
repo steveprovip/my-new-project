@@ -1,0 +1,7 @@
+// pages/_home.scss
+.home-banner {
+  background: linear-gradient(135deg, $primary-color, $secondary-color);
+  color: white;
+  padding: $spacing-xl $spacing-md;
+  text-align: center;
+}
