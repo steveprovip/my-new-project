@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hướng Dẫn Cài Đặt và Sử Dụng SASS qua npm & SASS CLI</title>
+    <!-- Nhúng file CSS được biên dịch tự động từ SASS SCSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="guide-container">
+        <header class="header">
+            <h1>[Bài đọc] Hướng dẫn cài đặt SASS bằng npm & SASS CLI</h1>
+            <p>Trang hướng dẫn trực quan & thực hành biên dịch tệp SCSS sang CSS bằng SASS CLI</p>
+        </header>
+
+        <section class="step-card">
+            <h3>1. Kiểm tra Node.js và npm</h3>
+            <p>SASS được quản lý và cài đặt tối ưu thông qua npm (Node Package Manager). Kiểm tra phiên bản bằng lệnh:</p>
+            <div class="command-box">node -v && npm -v</div>
+            <p>Kết quả thực tế trên máy hiện tại: <strong>Node.js v24.15.0</strong>, <strong>npm 11.12.1</strong> (đã sẵn sàng).</p>
+        </section>
+
+        <section class="step-card">
+            <h3>2. Cài đặt SASS toàn cục (Global) bằng npm</h3>
+            <p>Chạy lệnh cài đặt bản chính thức Dart SASS vào hệ thống:</p>
+            <div class="command-box">npm install -g sass</div>
+            <p>Kiểm tra phiên bản sau khi cài đặt:</p>
+            <div class="command-box">sass --version</div>
+        </section>
+
+        <section class="step-card">
+            <h3>3. Biên dịch SCSS sang CSS bằng SASS CLI</h3>
+            <p>Cú pháp chuyển đổi 1 file đơn lẻ từ SCSS sang CSS chuẩn:</p>
+            <div class="command-box">sass scss/styles.scss css/styles.css</div>
+        </section>
+
+        <section class="step-card">
+            <h3>4. Kích hoạt chế độ tự động theo dõi (Watch Mode)</h3>
+            <p>Tự động phát hiện thay đổi trong thư mục và biên dịch ngay lập tức mà không cần gõ lại lệnh:</p>
+            <div class="command-box">sass scss/:css/ --watch</div>
+        </section>
+
+        <section class="step-card">
+            <h3>5. Xử lý lỗi quyền truy cập "Set-ExecutionPolicy" trên Windows</h3>
+            <p>Nếu gặp lỗi không thể chạy script trên PowerShell, mở PowerShell với quyền Run as Administrator và thực hiện:</p>
+            <div class="command-box">Set-ExecutionPolicy Unrestricted -Scope CurrentUser</div>
+        </section>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="#" class="btn-demo">Trang web đang áp dụng CSS tạo từ SASS ✨</a>
+        </div>
+    </div>
+</body>
+</html>
