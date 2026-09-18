@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    padding: 30px 20px;
+    line-height: 1.6;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    color: #1e3a8a;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #4b5563;
+    font-size: 16px;
+}
+
+.subtitle code {
+    background: #e5e7eb;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #d97706;
+}
+
+.theory-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #2563eb;
+}
+
+.theory-card h2 {
+    color: #1e40af;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.syntax-box {
+    background: #1e293b;
+    color: #38bdf8;
+    padding: 12px 18px;
+    border-radius: 8px;
+    margin: 14px 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+
+.theory-card ul {
+    margin-left: 20px;
+}
+
+.theory-card li {
+    margin-bottom: 6px;
+}
+
+.example-section {
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.example-header {
+    margin-bottom: 20px;
+}
+
+.example-header h2 {
+    color: #0f172a;
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+.code-snippet {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 6px;
+    margin-top: 8px;
+    color: #0284c7;
+    font-weight: 600;
+}
+
+/* =======================================
+   VÍ DỤ 1: CSS GRID & GRID-GAP
+   ======================================= */
+.grid-container.example-1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 20px;
+    grid-column-gap: 50px;
+    grid-gap: 20px 50px; /* shorthand: hàng 20px, cột 50px */
+    background-color: #2196F3;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.example-1 .grid-item {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 6px;
+    color: #1e3a8a;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.example-1 .grid-item:hover {
+    transform: translateY(-3px);
+    background-color: #ffffff;
+}
+
+/* =======================================
+   VÍ DỤ 2: CSS GRID & GRID-GAP ĐỀU
+   ======================================= */
+.grid-container.example-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px; /* shorthand cho cả hàng và cột 30px */
+    background: #0f172a;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.example-2 .grid-item.card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    padding: 24px;
+    border-radius: 8px;
+    color: #f8fafc;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.example-2 .grid-item.card:hover {
+    border-color: #38bdf8;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+.badge {
+    background: #0284c7;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.example-2 h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+    color: #38bdf8;
+}
+
+.example-2 p {
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+@media (max-width: 768px) {
+    .grid-container.example-1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid-container.example-2 {
+        grid-template-columns: 1fr;
+    }
+}

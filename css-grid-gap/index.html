@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Thực hành] CSS | grid-gap Property</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-header">
+        <h1>[Thực hành] CSS | grid-gap Property</h1>
+        <p class="subtitle">Tìm hiểu và ứng dụng thuộc tính <code>grid-gap</code> (shorthand cho <code>grid-row-gap</code> và <code>grid-column-gap</code>)</p>
+    </div>
+
+    <div class="theory-card">
+        <h2>Lý thuyết tóm tắt</h2>
+        <p>Thuộc tính <code>grid-gap</code> (hoặc chuẩn hiện đại là <code>gap</code>) đặt kích thước của khoảng cách giữa các hàng và các cột trong bố cục lưới CSS Grid.</p>
+        <div class="syntax-box">
+            <code>grid-gap: &lt;grid-row-gap&gt; &lt;grid-column-gap&gt;;</code>
+        </div>
+        <ul>
+            <li><strong>grid-row-gap:</strong> Đặt kích thước khoảng cách giữa các hàng (mặc định 0).</li>
+            <li><strong>grid-column-gap:</strong> Đặt kích thước khoảng cách giữa các cột (mặc định 0).</li>
+            <li>Nếu chỉ có 1 giá trị: áp dụng cho cả hàng và cột.</li>
+        </ul>
+    </div>
+
+    <!-- VÍ DỤ 1 -->
+    <section class="example-section">
+        <div class="example-header">
+            <h2>Ví dụ 1: <code>grid-gap: 50px;</code> (hoặc hàng 20px, cột 50px)</h2>
+            <p>Khoảng cách giữa các cột là <strong>50px</strong>, khoảng cách giữa các hàng là <strong>20px</strong></p>
+            <div class="code-snippet">
+                <code>grid-gap: 20px 50px; /* row-gap: 20px; column-gap: 50px */</code>
+            </div>
+        </div>
+        <div class="grid-container example-1">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+            <div class="grid-item">7</div>
+            <div class="grid-item">8</div>
+        </div>
+    </section>
+
+    <!-- VÍ DỤ 2 -->
+    <section class="example-section">
+        <div class="example-header">
+            <h2>Ví dụ 2: Khoảng cách đều <code>grid-gap: 30px;</code></h2>
+            <p>Khoảng cách cả hàng và cột đều là <strong>30px</strong> với bố cục thẻ ảnh/sản phẩm trực quan</p>
+            <div class="code-snippet">
+                <code>grid-gap: 30px; /* row-gap: 30px; column-gap: 30px */</code>
+            </div>
+        </div>
+        <div class="grid-container example-2">
+            <div class="grid-item card">
+                <span class="badge">Mục A</span>
+                <h3>Item 1</h3>
+                <p>Nội dung thẻ lưới 1</p>
+            </div>
+            <div class="grid-item card">
+                <span class="badge">Mục B</span>
+                <h3>Item 2</h3>
+                <p>Nội dung thẻ lưới 2</p>
+            </div>
+            <div class="grid-item card">
+                <span class="badge">Mục C</span>
+                <h3>Item 3</h3>
+                <p>Nội dung thẻ lưới 3</p>
+            </div>
+            <div class="grid-item card">
+                <span class="badge">Mục D</span>
+                <h3>Item 4</h3>
+                <p>Nội dung thẻ lưới 4</p>
+            </div>
+            <div class="grid-item card">
+                <span class="badge">Mục E</span>
+                <h3>Item 5</h3>
+                <p>Nội dung thẻ lưới 5</p>
+            </div>
+            <div class="grid-item card">
+                <span class="badge">Mục F</span>
+                <h3>Item 6</h3>
+                <p>Nội dung thẻ lưới 6</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
