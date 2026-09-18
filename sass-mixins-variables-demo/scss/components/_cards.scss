@@ -1,0 +1,6 @@
+// components/_cards.scss
+.card {
+  @include box-style;
+  max-width: 600px;
+  margin: 20px 0;
+}

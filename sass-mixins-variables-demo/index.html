@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Thực hành] Tạo mixins & biến để tối ưu CSS của website mẫu</title>
+    <!-- Nhúng CSS được biên dịch từ SASS Mixins & Variables -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Tiêu đề H1 ($font-large: 32px, $text-color: #222)</h1>
+    <h2>Tiêu đề H2 ($font-medium: 28px, $text-color: #222)</h2>
+
+    <div class="card">
+        <h3>Thẻ Card (@include box-style)</h3>
+        <p>Thẻ này áp dụng <code>box-style</code> mixin với nền trắng, padding 15px, bo góc 10px và bóng đổ tự động từ biến <code>$box-shadow-default</code>.</p>
+        <div style="margin-top: 15px;">
+            <button class="button">Nút bấm (@include button-style)</button>
+        </div>
+    </div>
+</body>
+</html>
