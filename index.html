@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bài tập thiết kế UI/UX Giao diện trang đăng ký người dùng chuẩn Fitts' Law, Responsive, trải nghiệm người dùng tối ưu.">
+  <title>Thiết kế UI/UX - Trang Đăng Ký & Xác Nhận Người Dùng | CodeGym</title>
+  
+  <!-- Modern Typography (Plus Jakarta Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Ambient background glow -->
+  <div class="bg-ambient">
+    <div class="glow-orb-1"></div>
+    <div class="glow-orb-2"></div>
+  </div>
+
+  <!-- Top Controller & Presentation Bar (Giúp Giảng Viên / Học Viên Xem Các Chế Độ) -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand-badge">
+        <div class="brand-logo-icon">CG</div>
+        <span>CodeGym UI/UX Project</span>
+        <span class="tag-badge">Bài tập thực hành</span>
+      </div>
+
+      <div class="controls-group">
+        <!-- Chế độ hiển thị: Hoàn thiện vs Wireframe vs Ghi chú UX -->
+        <div class="segmented-control" role="group" aria-label="Chế độ xem">
+          <button id="modeHifiBtn" class="seg-btn active" title="Giao diện hoàn chỉnh sắc nét">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            Hi-Fi UI
+          </button>
+          <button id="modeWireframeBtn" class="seg-btn" title="Bản phác thảo khung dây sơ đồ">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" stroke-dasharray="3 3"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+            Wireframe
+          </button>
+          <button id="modeUxNotesBtn" class="seg-btn" title="Hiển thị ghi chú định luật UI/UX">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+            Ghi chú UX
+          </button>
+        </div>
+
+        <!-- Chuyển đổi nhanh 2 Trang -->
+        <div class="segmented-control" role="group" aria-label="Chuyển trang">
+          <button id="navPage1Btn" class="seg-btn active">Trang 1: Đăng ký</button>
+          <button id="navPage2Btn" class="seg-btn">Trang 2: Xác nhận</button>
+        </div>
+
+        <!-- Toggle Dark/Light Mode -->
+        <button id="themeToggleBtn" class="icon-btn" aria-label="Chuyển đổi giao diện Sáng/Tối" title="Sáng / Tối">
+          <svg id="themeIconSun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Stage -->
+  <main class="main-wrapper">
+
+    <!-- ================================================================ -->
+    <!-- TRANG 1: FORM ĐĂNG KÝ NGƯỜI DÙNG (REGISTRATION FORM)              -->
+    <!-- ================================================================ -->
+    <section id="pageRegister" class="page-view active" aria-labelledby="formTitle">
+      <div class="form-auth-card">
+        <div class="wireframe-watermark">WIREFRAME LO-FI SKETCH</div>
+
+        <header class="auth-header">
+          <!-- Ghi chú UX: Visual Hierarchy -->
+          <div class="ux-badge badge-top">Visual Hierarchy: Tiêu đề rõ ràng, giảm tải nhận thức</div>
+          <h1 id="formTitle" class="auth-title">Tạo tài khoản mới</h1>
+          <p class="auth-subtitle">Tham gia nền tảng học tập & phát triển kỹ năng toàn diện</p>
+        </header>
+
+        <!-- Social Quick Sign-up (Jakob's Law: Thói quen đăng nhập nhanh) -->
+        <div class="form-group">
+          <div class="ux-badge badge-top">Jakob's Law: Đăng ký 1 chạm quen thuộc (Google / GitHub)</div>
+          <div class="social-auth-grid">
+            <button type="button" class="social-btn" id="btnGoogleAuth" aria-label="Đăng ký bằng tài khoản Google">
+              <svg viewBox="0 0 24 24"><path fill="#EA4335" d="M12 5c1.6 0 3 .6 4.1 1.7l3.1-3.1C17.3 1.8 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.3 9 5 12 5z"/><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.7-.2-2.3H12v4.6h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.9z"/><path fill="#FBBC05" d="M5.6 14.8c-.2-.7-.4-1.5-.4-2.3 0-.8.2-1.6.4-2.3L1.9 7.3C.7 9.7 0 12.3 0 15.2s.7 5.5 1.9 7.9l3.7-2.9z"/><path fill="#34A853" d="M12 23.5c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2.3-6.4-5.2L1.9 16.5C3.7 20.2 7.5 23.5 12 23.5z"/></svg>
+              <span>Google</span>
+            </button>
+            <button type="button" class="social-btn" id="btnGithubAuth" aria-label="Đăng ký bằng tài khoản GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              <span>GitHub</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="auth-divider">
+          <span>Hoặc đăng ký bằng email</span>
+        </div>
+
+        <!-- FORM CHÍNH -->
+        <form id="registrationForm" novalidate>
+
+          <!-- 1. Trường Họ và tên -->
+          <div class="form-group" id="groupFullName">
+            <div class="ux-badge badge-top">Hick's Law: Chỉ lấy 4 trường cốt lõi, không gây quá tải</div>
+            <label for="fullName" class="form-label">
+              <span>Họ và tên <span class="required-asterisk">*</span></span>
+            </label>
+            <div class="input-wrapper">
+              <span class="input-icon-left">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </span>
+              <input 
+                type="text" 
+                id="fullName" 
+                name="fullName" 
+                class="form-input" 
+                placeholder="Nguyễn Văn A" 
+                autocomplete="name" 
+                required
+              >
+              <span class="validation-icon" id="iconFullName"></span>
+            </div>
+            <div class="field-message" id="msgFullName">Vui lòng nhập đầy đủ họ và tên (tối thiểu 2 từ).</div>
+          </div>
+
+          <!-- 2. Trường Email -->
+          <div class="form-group" id="groupEmail">
+            <label for="email" class="form-label">
+              <span>Địa chỉ Email <span class="required-asterisk">*</span></span>
+            </label>
+            <div class="input-wrapper">
+              <span class="input-icon-left">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </span>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                class="form-input" 
+                placeholder="example@codegym.vn" 
+                autocomplete="email" 
+                required
+              >
+              <span class="validation-icon" id="iconEmail"></span>
+            </div>
+            <div class="field-message" id="msgEmail">Email hợp lệ dùng để nhận thông báo và kích hoạt.</div>
+          </div>
+
+          <!-- 3. Trường Mật khẩu -->
+          <div class="form-group" id="groupPassword">
+            <div class="ux-badge badge-right">Feedback: Thước đo bảo mật tức thời</div>
+            <label for="password" class="form-label">
+              <span>Mật khẩu <span class="required-asterisk">*</span></span>
+            </label>
+            <div class="input-wrapper">
+              <span class="input-icon-left">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </span>
+              <input 
+                type="password" 
+                id="password" 
+                name="password" 
+                class="form-input" 
+                placeholder="Tối thiểu 8 ký tự" 
+                autocomplete="new-password" 
+                required
+              >
+              <button type="button" id="togglePasswordBtn" class="toggle-password-btn" aria-label="Ẩn hiện mật khẩu" title="Hiện mật khẩu">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              </button>
+            </div>
+
+            <!-- Password Strength Bar (Phản hồi thị giác trực quan) -->
+            <div class="password-strength-container" id="strengthContainer">
+              <div class="strength-meter-bar">
+                <div class="strength-segment" id="strengthSeg1"></div>
+                <div class="strength-segment" id="strengthSeg2"></div>
+                <div class="strength-segment" id="strengthSeg3"></div>
+              </div>
+              <div class="strength-label">
+                <span>Độ mạnh: <strong id="strengthText">Chưa nhập</strong></span>
+                <span id="strengthHint">Tối thiểu 8 ký tự</span>
+              </div>
+              
+              <!-- Checklist tiêu chí mật khẩu -->
+              <ul class="strength-criteria-list">
+                <li class="criteria-item" id="critLength"><span class="criteria-dot"></span> Từ 8 ký tự trở lên</li>
+                <li class="criteria-item" id="critUpper"><span class="criteria-dot"></span> Có chữ in hoa (A-Z)</li>
+                <li class="criteria-item" id="critNumber"><span class="criteria-dot"></span> Có chứa chữ số (0-9)</li>
+                <li class="criteria-item" id="critSpecial"><span class="criteria-dot"></span> Có ký tự đặc biệt (!@#$)</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 4. Trường Xác nhận mật khẩu -->
+          <div class="form-group" id="groupConfirmPassword">
+            <div class="ux-badge badge-top">Error Prevention: Chống gõ nhầm mật khẩu</div>
+            <label for="confirmPassword" class="form-label">
+              <span>Xác nhận mật khẩu <span class="required-asterisk">*</span></span>
+            </label>
+            <div class="input-wrapper">
+              <span class="input-icon-left">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </span>
+              <input 
+                type="password" 
+                id="confirmPassword" 
+                name="confirmPassword" 
+                class="form-input" 
+                placeholder="Nhập lại mật khẩu ở trên" 
+                autocomplete="new-password" 
+                required
+              >
+              <button type="button" id="toggleConfirmPasswordBtn" class="toggle-password-btn" aria-label="Ẩn hiện mật khẩu xác nhận" title="Hiện mật khẩu">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              </button>
+            </div>
+            <div class="field-message" id="msgConfirmPassword">Nhập chính xác mật khẩu đã đặt phía trên.</div>
+          </div>
+
+          <!-- Checkbox điều khoản -->
+          <label class="terms-agreement" for="agreeTerms">
+            <input type="checkbox" id="agreeTerms" required>
+            <span>Tôi đồng ý với <a href="#" class="terms-link">Điều khoản dịch vụ</a> và <a href="#" class="terms-link">Chính sách bảo mật</a> của CodeGym</span>
+          </label>
+
+          <!-- Nút Đăng Ký - Tuân thủ triệt để Fitts' Law -->
+          <div class="form-group" style="position: relative; margin-top: 10px;">
+            <div class="ux-badge badge-top">Fitts' Law: Nút CTA lớn (H: 52px), Full Width, Dễ chạm bấm</div>
+            <button type="submit" id="submitBtn" class="btn-primary-cta">
+              <span>Hoàn tất đăng ký tài khoản</span>
+              <svg class="btn-arrow-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </div>
+        </form>
+
+        <footer class="auth-footer">
+          <span>Đã có tài khoản CodeGym?</span>
+          <a href="#" id="linkToLogin">Đăng nhập ngay</a>
+        </footer>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- TRANG 2: TRANG XÁC NHẬN KHI ĐĂNG KÝ THÀNH CÔNG                    -->
+    <!-- ================================================================ -->
+    <section id="pageSuccess" class="page-view" aria-labelledby="successTitle">
+      <div class="form-auth-card success-card">
+        <div class="wireframe-watermark">WIREFRAME LO-FI SKETCH</div>
+
+        <div class="ux-badge badge-top">Affordance & Feedback: Huy hiệu thành công & xác thực tâm lý</div>
+        
+        <!-- Icon thành công nổi bật với hiệu ứng Pulse -->
+        <div class="success-icon-badge" aria-hidden="true">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 6L9 17l-5-5"/>
+          </svg>
+        </div>
+
+        <h1 id="successTitle" class="success-title">Đăng ký thành công!</h1>
+        <p class="success-desc">
+          Chào mừng bạn đến với cộng đồng lập trình! Chúng tôi đã gửi email hướng dẫn kích hoạt tài khoản đến địa chỉ:
+          <br><strong id="registeredEmailDisplay">user@example.com</strong>
+        </p>
+
+        <!-- Thẻ tóm tắt thông tin vừa đăng ký -->
+        <div class="user-summary-box">
+          <div class="summary-row">
+            <span class="summary-label">Họ và tên:</span>
+            <span class="summary-value" id="summaryFullName">Nguyễn Văn A</span>
+          </div>
+          <div class="summary-row">
+            <span class="summary-label">Email tài khoản:</span>
+            <span class="summary-value" id="summaryEmail">user@example.com</span>
+          </div>
+          <div class="summary-row">
+            <span class="summary-label">Thời gian tạo:</span>
+            <span class="summary-value" id="summaryTimestamp">18/09/2026 - 08:45</span>
+          </div>
+          <div class="summary-row">
+            <span class="summary-label">Trạng thái:</span>
+            <span class="summary-value" style="color: var(--warning); display: flex; align-items: center; gap: 4px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Chờ xác nhận email
+            </span>
+          </div>
+        </div>
+
+        <!-- Các nút hành động chính (Fitts' Law) -->
+        <div class="success-actions">
+          <div style="position: relative;">
+            <div class="ux-badge badge-top">Fitts' Law: Primary CTA hướng người dùng đến bước kế tiếp</div>
+            <button type="button" class="btn-primary-cta" id="btnGoToDashboard">
+              <span>Đăng nhập vào Hệ thống</span>
+              <svg class="btn-arrow-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </div>
+
+          <button type="button" class="btn-secondary" id="btnResendEmail">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+            <span id="resendBtnText">Gửi lại email kích hoạt</span>
+          </button>
+        </div>
+
+        <footer class="auth-footer" style="margin-top: 24px;">
+          <a href="#" id="btnBackToRegister">← Quay lại trang đăng ký tài khoản</a>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
