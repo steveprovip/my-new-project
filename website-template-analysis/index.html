@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Phân tích và Xây dựng Cấu Trúc Website Template</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- 1. HEADER: Tiêu đề trang và khẩu hiệu nhận diện -->
+    <header class="header">
+        <div class="header-container">
+            <h1 class="site-title">TechInsights Vietnam</h1>
+            <p class="site-tagline">Tạp chí kiến trúc phần mềm & Công nghệ thông tin hiện đại</p>
+        </div>
+    </header>
+
+    <!-- 2. NAVIGATION MENU: Có ít nhất 4 mục điều hướng -->
+    <nav class="navigation">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="#" class="active">Trang chủ</a></li>
+                <li><a href="#analysis">Báo cáo phân tích</a></li>
+                <li><a href="#services">Dịch vụ & Đào tạo</a></li>
+                <li><a href="#about">Về chúng tôi</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 3. CONTENT SECTION: Bố cục văn bản mô tả và hình ảnh -->
+    <main class="main-content">
+        <!-- Phần phân tích cấu trúc trang web mẫu -->
+        <section class="analysis-card" id="analysis">
+            <h2>1. Báo Cáo Phân Tích Cấu Trúc Website Mẫu (TechCrunch / Medium)</h2>
+            <div class="analysis-grid">
+                <div class="analysis-item">
+                    <h3>• Header (Đầu trang)</h3>
+                    <p>Đặt trên cùng với logo nhận diện thương hiệu rõ ràng, tiêu đề trang và khẩu hiệu (slogan) giúp người dùng ngay lập tức nắm bắt mục tiêu của trang.</p>
+                </div>
+                <div class="analysis-item">
+                    <h3>• Navigation Menu (Menu điều hướng)</h3>
+                    <p>Thanh thực đơn gồm 5 mục được cố định (sticky/fixed), áp dụng Flexbox căn đều, cung cấp lối tắt điều hướng trực tiếp đến các chuyên mục chính của website.</p>
+                </div>
+                <div class="analysis-item">
+                    <h3>• Content Section (Nội dung chính)</h3>
+                    <p>Chia làm 2 cột cân xứng: Cột bài viết chứa văn bản mô tả chuyên sâu và cột hình ảnh minh họa thực tế nhằm gia tăng mức độ tiếp nhận thông tin trực quan.</p>
+                </div>
+                <div class="analysis-item">
+                    <h3>• Footer (Chân trang)</h3>
+                    <p>Chân trang nền tối, bao gồm đầy đủ thông tin bản quyền pháp lý, chính sách bảo mật và danh sách liên kết nhanh mạng xã hội hỗ trợ người dùng.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phần tái hiện bố cục với văn bản mô tả và hình ảnh -->
+        <section class="content-showcase" id="services">
+            <div class="content-text">
+                <span class="badge">Bố cục thực tế</span>
+                <h2>Xây dựng giao diện chuẩn Semantic HTML5 & CSS Layout</h2>
+                <p>
+                    Việc phân chia rành mạch cấu trúc web thành các thẻ ngữ nghĩa <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code> và <code>&lt;footer&gt;</code> mang lại lợi ích kép: giúp công cụ tìm kiếm (SEO) thu thập dữ liệu chính xác, đồng thời tăng cường khả năng tiếp cận (Accessibility - A11y) cho người khuyết tật.
+                </p>
+                <p>
+                    Kết hợp các kỹ thuật bố cục hiện đại như Flexbox và CSS Grid giúp cấu trúc trang web co giãn nhịp nhàng trên mọi thiết bị mà không cần phụ thuộc vào các thư viện phức tạp.
+                </p>
+                <a href="#contact" class="btn-primary">Xem tài liệu chi tiết</a>
+            </div>
+            <div class="content-media">
+                <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80" alt="Mô phỏng cấu trúc website">
+            </div>
+        </section>
+    </main>
+
+    <!-- 4. FOOTER: Chứa thông tin bản quyền và liên kết -->
+    <footer class="footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-info">
+                <p>• &copy; 2026 TechInsights Vietnam. All rights reserved.</p>
+                <p class="footer-sub">• Bài tập: Phân tích và Xây dựng Cấu Trúc Website Template | CodeGym</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Chính sách bảo mật</a> | 
+                <a href="#">Điều khoản dịch vụ</a> | 
+                <a href="#">Sơ đồ trang web</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
