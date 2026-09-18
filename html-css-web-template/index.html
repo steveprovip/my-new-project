@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple web Development Template</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Piazzolla:wght@600;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            cursor: pointer;
+            padding: 0 40px;
+            z-index: 1000;
+        }
+
+        .background {
+            background: #111;
+            background-blend-mode: darken;
+            background-size: cover;
+        }
+
+        .nav-list {
+            width: 70%;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid white;
+        }
+
+        .nav-list li {
+            list-style: none;
+            padding: 20px 24px;
+        }
+
+        .nav-list li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-list li a:hover {
+            color: #f39c12;
+        }
+
+        .rightNav, .rightnav {
+            width: 30%;
+            text-align: right;
+        }
+
+        #search {
+            padding: 6px 12px;
+            font-size: 15px;
+            border: 2px solid grey;
+            border-radius: 8px;
+            outline: none;
+            background-color: #222;
+            color: white;
+        }
+
+        #search:focus {
+            border-color: #f39c12;
+        }
+
+        .btn {
+            padding: 7px 16px;
+            margin-left: 6px;
+            border: 2px solid white;
+            border-radius: 8px;
+            background: transparent;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+            color: black;
+        }
+
+        .btn-sm {
+            padding: 6px 12px;
+            vertical-align: middle;
+        }
+
+        /* FIRST SECTION */
+        .firstsection {
+            background: linear-gradient(135deg, #1b5e20, #2e7d32);
+            height: 420px;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        /* SECOND SECTION */
+        .secondsection {
+            background: linear-gradient(135deg, #0d47a1, #1565c0);
+            height: 420px;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .box-main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 80%;
+            margin: auto;
+            height: 80%;
+        }
+
+        .firsthalf, .firstHalf {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .secondhalf, .secondHalf {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .text-big {
+            font-family: 'Piazzolla', serif;
+            font-weight: bold;
+            font-size: 38px;
+            margin-bottom: 16px;
+        }
+
+        .text-small {
+            font-size: 17px;
+            line-height: 1.7;
+            opacity: 0.95;
+        }
+
+        /* THIRD SECTION */
+        .section {
+            min-height: 420px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 90%;
+            margin: auto;
+            padding: 40px 0;
+        }
+
+        .section-Left, .section-left {
+            flex-direction: row-reverse;
+        }
+
+        .paras {
+            padding: 0px 50px;
+            flex: 1;
+        }
+
+        .paras h1 {
+            color: #222;
+        }
+
+        .paras p {
+            color: #444;
+        }
+
+        .thumbnail {
+            flex-shrink: 0;
+        }
+
+        .thumbnail img {
+            width: 320px;
+            border: 2px solid #333;
+            border-radius: 18px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            display: block;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        /* FOOTER */
+        .text-footer {
+            text-align: center;
+            padding: 25px 0;
+            font-family: 'Ubuntu', sans-serif;
+            display: flex;
+            justify-content: center;
+            color: white;
+            font-size: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 15px;
+            }
+            .nav-list {
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .nav-list li {
+                padding: 10px 14px;
+            }
+            .rightNav, .rightnav {
+                width: 100%;
+                text-align: center;
+                margin-top: 10px;
+            }
+            .firstsection, .secondsection {
+                height: auto;
+                padding: 40px 15px;
+            }
+            .section {
+                flex-direction: column;
+                text-align: center;
+                height: auto;
+            }
+            .paras {
+                padding: 0 10px 25px 10px;
+            }
+            .thumbnail img {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- THANH NAVBAR -->
+    <nav class="navbar background">
+        <ul class="nav-list">
+            <div class="logo">
+                <img src="https://cdn-icons-png.flaticon.com/512/1005/1005141.png" alt="Logo">
+            </div>
+            <li><a href="#web">Web Technology</a></li>
+            <li><a href="#program">C Programming</a></li>
+            <li><a href="#course">Courses</a></li>
+        </ul>
+
+        <div class="rightNav">
+            <input type="text" name="search" id="search" placeholder="Search topics...">
+            <button class="btn btn-sm">Search</button>
+        </div>
+    </nav>
+
+    <!-- SECTION 1: WEB TECHNOLOGY -->
+    <section class="firstsection">
+        <div class="box-main">
+            <div class="firstHalf">
+                <h1 class="text-big" id="web">
+                    Web Technology
+                </h1>
+                <p class="text-small">
+                    HTML stands for HyperText Markup
+                    Language. It is used to design
+                    web pages using a markup language.
+                    HTML is the combination of Hypertext
+                    and Markup language. Hypertext
+                    defines the link between the web
+                    pages. A markup language is used
+                    to define the text document within
+                    tag which defines the structure of
+                    web pages. HTML is a markup language
+                    that is used by the browser to
+                    manipulate text, images, and other
+                    content to display it in the required
+                    format.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: C PROGRAMMING -->
+    <section class="secondsection">
+        <div class="box-main">
+            <div class="secondHalf">
+                <h1 class="text-big" id="program">
+                    C Programming
+                </h1>
+                <p class="text-small">
+                    C is a procedural programming language.
+                    It was initially developed by Dennis
+                    Ritchie as a system programming
+                    language to write operating system.
+                    The main features of C language include
+                    low-level access to memory, simple set
+                    of keywords, and clean style, these
+                    features make C language suitable for
+                    system programming like operating system
+                    or compiler development.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: JAVA & THUMBNAIL -->
+    <section class="section" id="course">
+        <div class="paras">
+            <h1 class="sectionTag text-big">Java</h1>
+            <p class="sectionSubTag text-small">
+                Java has been one of the most
+                popular programming language
+                for many years. Java is Object
+                Oriented. However it is not
+                considered as pure object oriented
+                as it provides support for primitive
+                data types (like int, char, etc) The
+                Java codes are first compiled into byte
+                code (machine independent code). Then
+                the byte code is run on Java Virtual
+                Machine (JVM) regardless of the
+                underlying architecture.
+            </p>
+        </div>
+
+        <div class="thumbnail">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=500&q=80" alt="laptop image">
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="background">
+        <p class="text-footer">
+            Copyright © 2026 - All rights are reserved
+        </p>
+    </footer>
+</body>
+</html>
