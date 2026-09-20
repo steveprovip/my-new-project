@@ -1,0 +1,77 @@
+/* =====================================================
+   MetricsHub - Refactored Layout
+   Navbar = Flexbox (1D) | Dashboard = CSS Grid (2D)
+   Pricing = Bootstrap Grid 12 cột (0 CSS tự viết)
+   ===================================================== */
+
+/* ---------- 1. NAVBAR: FLEXBOX ---------- */
+.nav-flexbox {
+    display: flex;                 /* 1D: xếp ngang theo dòng */
+    flex-wrap: wrap;               /* rớt dòng đẹp mắt khi chữ dài / màn hẹp */
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;                     /* thay thế margin lộn xộn */
+    background: #333;
+    color: #fff;
+    padding: 15px 24px;
+}
+
+.nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------- 2. DASHBOARD: CSS GRID (BENTO BOX) ---------- */
+.grid-dashboard {
+    display: grid;                        /* 2D: kiểm soát cả hàng lẫn cột */
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(120px, auto);
+    gap: 12px;                            /* gap của Grid thay margin dư thừa */
+    padding: 16px;
+}
+
+.widget {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background: #fff;
+    display: flex;                /* Flexbox lồng trong Grid: canh giữa nội dung component */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+/* Widget đặc biệt span bằng grid-line, không cần thẻ .column bao ngoài */
+.widget-a {
+    grid-column: span 2;          /* chiếm 2 cột */
+    grid-row: span 2;             /* chiếm 2 hàng */
+    background: #e7f1ff;
+    font-size: 1.2rem;
+}
+
+.widget-d {
+    grid-column: span 2;          /* chiếm 2 cột */
+    background: #fff3cd;
+}
+
+/* Mobile: 3 cột -> 1 cột, các span tự động về 1 cột */
+@media (max-width: 768px) {
+    .grid-dashboard {
+        grid-template-columns: 1fr;
+    }
+    .widget-a,
+    .widget-d {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+
+/* ---------- 3. PRICING: BOOTSTRAP (không viết CSS) ---------- */
+/* Toàn bộ layout phần này do .container / .row / .col-12.col-md-4 của
+   Bootstrap đảm nhiệm — bên trong row Bootstrap dùng Flexbox ngầm. */

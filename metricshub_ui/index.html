@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MetricsHub - Refactored Layout</title>
+    <!-- Bootstrap 5 (dùng cho Pricing Section) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ============ NAVBAR: FLEXBOX ============
+         Lỗi cũ: grid-template-columns: 200px 600px 200px (fix cứng pixel,
+         chữ tiếng Đức dài bị tràn). Flexbox tự giãn theo nội dung (content-first). -->
+    <nav class="nav-flexbox">
+        <div class="nav-logo">Logo</div>
+        <ul class="nav-menu">
+            <li>Home</li>
+            <li>About</li>
+            <li>VeryLongGermanWordForDashboard</li>
+            <li>Contact</li>
+        </ul>
+        <div class="nav-profile">Profile</div>
+    </nav>
+
+    <!-- ============ DASHBOARD: CSS GRID (BENTO BOX) ============
+         Lỗi cũ: hàng tá .column Flexbox lồng nhau (Div Soup) + fix cứng height.
+         Mới: các .widget là anh em ngang hàng (siblings), span bằng grid-line. -->
+    <main class="grid-dashboard">
+        <section class="widget widget-a">Chart A <small>(span 2 cột × 2 hàng)</small></section>
+        <section class="widget">Chart B</section>
+        <section class="widget">Chart C</section>
+        <section class="widget widget-d">Chart D <small>(span 2 cột)</small></section>
+        <section class="widget">Chart E</section>
+        <section class="widget">Chart F</section>
+    </main>
+
+    <!-- ============ PRICING: BOOTSTRAP GRID 12 CỘT ============
+     Lỗi cũ: tự viết float + media query thuần.
+     Mới: dùng container/row/col-md-4 có sẵn của Bootstrap, 0 dòng CSS tự viết. -->
+    <section class="container py-5" id="pricing">
+        <h2 class="text-center mb-4">Pricing</h2>
+        <div class="row g-4">
+            <div class="col-12 col-md-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Gói Cơ bản</h5>
+                        <p class="card-text">$9/tháng — Dành cho cá nhân mới bắt đầu.</p>
+                        <button class="btn btn-primary">Chọn gói</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Gói Nâng cao</h5>
+                        <p class="card-text">$29/tháng — Dành cho đội nhóm nhỏ.</p>
+                        <button class="btn btn-primary">Chọn gói</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Gói Doanh nghiệp</h5>
+                        <p class="card-text">$99/tháng — Dành cho tổ chức lớn.</p>
+                        <button class="btn btn-primary">Chọn gói</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
